@@ -1,0 +1,20 @@
+[profile.default]
+src = "contracts/src"
+test = "contracts/test"
+out = "contracts/out"
+script = "contracts/script"
+cache_path = "contracts/cache"
+broadcast = "contracts/broadcast"
+libs = ["dependencies"]
+auto_detect_remappings = true
+
+[soldeer]
+recursive_deps = true
+remappings_location = "txt"
+remappings_version = false
+
+[dependencies]
+eigenlayer-middleware = { version = "0.5.4", git = "https://github.com/Layr-Labs/eigenlayer-middleware.git", tag = "v0.5.4-mainnet-rewards-v2" }
+forge-std = { version = "1.9.4" }
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

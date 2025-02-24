@@ -1,0 +1,61 @@
+[package]
+name = "my-eigenlayer-avs-1"
+version = "0.1.0"
+edition = "2021"
+description = "eigengames!"
+authors = ["Han <phamhan@uw.edu>"]
+license = "MIT OR Apache-2.0"
+homepage = "."
+repository = "https://github.com/hanpham32/my-eigenlayer-avs-1"
+readme = "README.md"
+categories = ["cryptography", "cryptography::cryptocurrencies"]
+keywords = ["tangle", "blueprint", "avs"]
+rust-version = "1.81"
+
+[dependencies]
+structopt = "0.3.26"
+openai_dive = "0.6"
+actix-web = "4.9.0"
+# Gadget
+blueprint-sdk = { git = "https://github.com/tangle-network/gadget.git", default-features = false, features = [
+  "std",
+  "eigenlayer",
+  "evm",
+  "macros",
+  "build",
+] }
+serde = { version = "1.0.208", features = ["derive"] }
+thiserror = "2.0.11"
+tokio = "1.43.0"
+gadget-sdk = "0.6.2"
+color-eyre = "0.6.3"
+
+
+[build-dependencies]
+blueprint-sdk = { git = "https://github.com/tangle-network/gadget.git", default-features = false, features = [
+  "std",
+  "build",
+] }
+
+[features]
+default = ["std"]
+std = ["blueprint-sdk/std"]
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "my-eigenlayer-avs-1"
+path = "src/main.rs"
+
+[package.metadata.blueprint]
+manager = { Evm = "TangleTaskManager" }
+
+[[package.metadata.gadget.Native.sources]]
+owner = "hanpham32"
+repo = "my-eigenlayer-avs-1"
+tag = "0.1.0"
+binaries = [
+  { arch = "Amd64", os = "Linux", name = "amd64-linux-my-eigenlayer-avs-1-gadget" },
+  { arch = "Arm64", os = "Linux", name = "arm64-linux-my-eigenlayer-avs-1-gadget" },
+]
