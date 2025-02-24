@@ -1,11 +1,17 @@
 use blueprint::{TangleTaskManager, TASK_MANAGER_ADDRESS};
 use blueprint_sdk::alloy::primitives::{address, Address, U256};
+use blueprint_sdk::config::ContextConfig;
 use blueprint_sdk::logging::{info, warn};
 use blueprint_sdk::macros::main;
 use blueprint_sdk::runners::core::runner::BlueprintRunner;
 use blueprint_sdk::runners::eigenlayer::bls::EigenlayerBLSConfig;
 use blueprint_sdk::utils::evm::get_provider_http;
 
+use color_eyre::eyre::Context;
+use gadget_sdk::clap::FromArgMatches;
+use gadget_sdk::config::GadgetConfiguration;
+use gadget_sdk::parking_lot;
+use gadget_sdk::run::GadgetRunner;
 use my_eigenlayer_avs_1 as blueprint;
 use my_eigenlayer_avs_1::actix_server;
 use structopt::StructOpt;
@@ -14,9 +20,33 @@ use structopt::StructOpt;
 async fn main() {
     // Create your service context
     // Here you can pass any configuration or context that your service needs.
-    let context = blueprint::ExampleContext {
-        config: env.clone(),
-    };
+
+    let config = ContextConfig::from_arg_matches(matches);
+
+    let (env, mut runner) = create_gadget_runner(config.clone()).await;
+
+    // Register the operator if needed
+    if env.should_run_registration() {
+        // Execute any custom registration hook
+        runner.register().await?;
+    }
+
+    let model = "llama".to_string();
+    let service_id = env.service_id.unwrap_or_default();
+
+    // Run the server and the gadget concurrently
+    tokio::select! {
+        server_result = actix_server::server::run_server(service_id, model) => {
+            if let Err(e) = server_result {
+                eprintln!("Server error: {}", e);
+            }
+        }
+        runner_result = runner.run() => {
+            if let Err(e) = runner_result {
+                eprintln!("Runner error: {}", e);
+            }
+        }
+    }
 
     // Get the provider
     let rpc_endpoint = env.http_rpc_endpoint.clone();
@@ -56,5 +86,23 @@ async fn main() {
         .await?;
 
     info!("Exiting...");
+
     Ok(())
+}
+
+struct TangleGadgetRunner {
+    env: GadgetConfiguration<parking_lot::RawRwLock>,
+}
+
+async fn create_gadget_runner(
+    config: ContextConfig,
+) -> (
+    GadgetConfiguration<parking_lot::RawRwLock>,
+    Box<dyn GadgetRunner<Error = color_eyre::Report>>,
+) {
+    let env = gadget_sdk::config::load(config).expect("Failed to load environment");
+    match env.protocol {
+        Protocol::Tangle => (env.clone(), Box::new(TangleGadgetRunner { env })),
+        _ => panic!("Unsupported protocol Eigenlayer. Gadget/Tangle need U256 support."),
+    }
 }
