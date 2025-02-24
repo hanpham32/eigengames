@@ -1,6 +1,6 @@
 use actix_web::{web, App, HttpResponse, HttpServer, Responder};
+use blueprint_sdk::logging::info;
 use color_eyre::Result;
-use gadget_sdk::info;
 use std::sync::Arc;
 use tokio::sync::Mutex;
 
