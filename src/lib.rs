@@ -10,7 +10,10 @@ use blueprint_sdk::std::sync::LazyLock;
 use serde::{Deserialize, Serialize};
 
 pub mod actix_server;
+pub mod error;
+pub mod manager;
 pub mod runner;
+pub mod types;
 
 type ProcessorError =
     blueprint_sdk::event_listeners::core::Error<blueprint_sdk::event_listeners::evm::error::Error>;
