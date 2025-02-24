@@ -11974,14 +11974,15 @@ dependencies = [
 
 [[package]]
 name = "openai_dive"
-version = "0.6.6"
+version = "0.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c3145b6053780214d0d872f204c92e2cf65706b8b78aa304d76567a8d3764d15"
+checksum = "c7082ec977902c792ef3754756de2dfbd8d9cfec128d2e3d814f22b8a6eb0887"
 dependencies = [
  "bytes",
  "derive_builder",
  "reqwest 0.12.12",
  "serde",
+ "serde_html_form",
  "serde_json",
  "tokio",
  "tokio-util",
@@ -17062,6 +17063,19 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.98",
+]
+
+[[package]]
+name = "serde_html_form"
+version = "0.2.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9d2de91cf02bbc07cde38891769ccd5d4f073d22a40683aa4bc7a95781aaa2c4"
+dependencies = [
+ "form_urlencoded",
+ "indexmap 2.7.1",
+ "itoa",
+ "ryu",
+ "serde",
 ]
 
 [[package]]

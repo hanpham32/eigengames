@@ -14,7 +14,7 @@ rust-version = "1.81"
 
 [dependencies]
 structopt = "0.3.26"
-openai_dive = "0.6"
+openai_dive = "0.7"
 actix-web = "4.9.0"
 # Gadget
 blueprint-sdk = { git = "https://github.com/tangle-network/gadget.git", default-features = false, features = [
