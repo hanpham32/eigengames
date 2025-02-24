@@ -1,4 +1,4 @@
-use blueprint::{TangleTaskManager, TASK_MANAGER_ADDRESS};
+use blueprint::{GadgetConfiguration, TangleTaskManager, TASK_MANAGER_ADDRESS};
 use blueprint_sdk::alloy::primitives::{address, Address, U256};
 use blueprint_sdk::config::ContextConfig;
 use blueprint_sdk::logging::{info, warn};
@@ -8,10 +8,6 @@ use blueprint_sdk::runners::eigenlayer::bls::EigenlayerBLSConfig;
 use blueprint_sdk::utils::evm::get_provider_http;
 
 use color_eyre::eyre::Context;
-use gadget_sdk::clap::FromArgMatches;
-use gadget_sdk::config::GadgetConfiguration;
-use gadget_sdk::parking_lot;
-use gadget_sdk::run::GadgetRunner;
 use my_eigenlayer_avs_1 as blueprint;
 use my_eigenlayer_avs_1::actix_server;
 use structopt::StructOpt;
@@ -35,7 +31,7 @@ async fn main() {
     let service_id = env.service_id.unwrap_or_default();
 
     // Run the server and the gadget concurrently
-    tokio::select! {
+    blueprint_sdk::tokio::select! {
         server_result = actix_server::server::run_server(service_id, model) => {
             if let Err(e) = server_result {
                 eprintln!("Server error: {}", e);
@@ -54,9 +50,6 @@ async fn main() {
 
     // Create an instance of your task manager
     let contract = TangleTaskManager::new(*TASK_MANAGER_ADDRESS, provider);
-
-    // Create the event handler from the job
-    let say_hello_job = blueprint::SayHelloEventHandler::new(contract, context.clone());
 
     // Spawn a task to create a task - this is just for testing/example purposes
     info!("Spawning a task to create a task on the contract...");
@@ -78,7 +71,11 @@ async fn main() {
         }
     });
 
+    // Create the event handler from the job
+    let say_hello_job = blueprint::SayHelloEventHandler::new(contract, context.clone());
+
     info!("Starting the event watcher ...");
+
     let eigen_config = EigenlayerBLSConfig::new(Address::default(), Address::default());
     BlueprintRunner::new(eigen_config, env)
         .job(say_hello_job)
@@ -92,6 +89,98 @@ async fn main() {
 
 struct TangleGadgetRunner {
     env: GadgetConfiguration<parking_lot::RawRwLock>,
+}
+
+#[async_trait::async_trait]
+impl GadgetRunner for TangleGadgetRunner {
+    type Error = color_eyre::eyre::Report;
+
+    fn config(&self) -> &StdGadgetConfiguration {
+        todo!()
+    }
+
+    async fn register(&mut self) -> Result<()> {
+        // TODO: Use the function in blueprint-test-utils
+        if self.env.test_mode {
+            info!("Skipping registration in test mode");
+            return Ok(());
+        }
+
+        let client = self.env.client().await.map_err(|e| eyre!(e))?;
+        let signer = self
+            .env
+            .first_sr25519_signer()
+            .map_err(|e| eyre!(e))
+            .map_err(|e| eyre!(e))?;
+        let ecdsa_pair = self.env.first_ecdsa_signer().map_err(|e| eyre!(e))?;
+
+        let xt = api::tx().services().register(
+            self.env.blueprint_id,
+            services::OperatorPreferences {
+                key: ecdsa::Public(ecdsa_pair.signer().public().0),
+                approval: services::ApprovalPrefrence::None,
+                price_targets: PriceTargets {
+                    cpu: 0,
+                    mem: 0,
+                    storage_hdd: 0,
+                    storage_ssd: 0,
+                    storage_nvme: 0,
+                },
+            },
+            Default::default(),
+        );
+
+        // send the tx to the tangle and exit.
+        let result = tx::tangle::send(&client, &signer, &xt).await?;
+        info!("Registered operator with hash: {:?}", result);
+        Ok(())
+    }
+
+    async fn benchmark(&self) -> std::result::Result<(), Self::Error> {
+        todo!()
+    }
+
+    async fn run(&self) -> Result<()> {
+        let client = self.env.client().await.map_err(|e| eyre!(e))?;
+        let signer = self.env.first_sr25519_signer().map_err(|e| eyre!(e))?;
+
+        info!("Starting the event watcher for {} ...", signer.account_id());
+
+        let start_job = blueprint::RunGaiaNodeJobEventHandler {
+            service_id: self.env.service_id.unwrap(),
+            signer: signer.clone(),
+        };
+
+        let stop_job = blueprint::StopGaiaNodeJobEventHandler {
+            service_id: self.env.service_id.unwrap(),
+            signer: signer.clone(),
+        };
+
+        let upgrade_job = blueprint::UpgradeGaiaNodeJobEventHandler {
+            service_id: self.env.service_id.unwrap(),
+            signer: signer.clone(),
+        };
+
+        let update_config_job = blueprint::UpdateGaiaConfigJobEventHandler {
+            service_id: self.env.service_id.unwrap(),
+            signer,
+        };
+
+        let program = TangleEventsWatcher {
+            span: self.env.span.clone(),
+            client,
+            handlers: vec![
+                Box::new(start_job),
+                Box::new(stop_job),
+                Box::new(upgrade_job),
+                Box::new(update_config_job),
+            ],
+        };
+
+        program.into_tangle_event_listener().execute().await;
+
+        Ok(())
+    }
 }
 
 async fn create_gadget_runner(

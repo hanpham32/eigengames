@@ -1,6 +1,43 @@
-use gadget_sdk::executor::process::manager::GadgetProcessManager;
+use super::error::Error;
+use super::types::GadgetProcess;
 use std::collections::HashMap;
-use std::error::Error;
+use sysinfo::{Pid, System};
+use tokio::sync::broadcast;
+
+#[derive(Debug)]
+pub struct GadgetProcessManager {
+    pub children: HashMap<String, GadgetProcess>,
+    pub system: System,
+}
+
+impl GadgetProcessManager {
+    #[must_use]
+    pub fn new() -> Self {
+        Self {
+            children: HashMap::new(),
+            system: System::new_all(),
+        }
+    }
+    pub async fn run(&mut self, id: String, command: &str) -> Result<String, Error> {
+        let process = GadgetProcess::new(command.to_string()).await?;
+        self.children.insert(id.clone(), process);
+        Ok(id)
+    }
+
+    pub async fn run_with_output(
+        &mut self,
+        identifier: String,
+        command: &str,
+    ) -> Result<broadcast::Receiver<String>, Error> {
+        self.run(identifier.clone(), command).await?;
+        let process = self
+            .children
+            .get(&identifier)
+            .ok_or_else(|| Error::ProcessNotFound(Pid::from(0)))?;
+
+        process.get_output()
+    }
+}
 
 async fn run_and_focus_multiple<'a>(
     manager: &mut GadgetProcessManager,
