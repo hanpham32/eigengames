@@ -1,3 +1,23 @@
+## Usage
+
+### Deploy
+
+```bash
+cargo tangle blueprint deploy eigenlayer \
+    --devnet \
+    --ordered-deployment
+```
+
+### Run
+
+```bash
+TASK_MANAGER_ADDRESS=0x07882Ae1ecB7429a84f1D53048d35c4bB2056877 cargo tangle blueprint run \
+    -p eigenlayer \
+    -u http://localhost:55004 \
+    --keystore-path ./test-keystore
+
+```
+
 # <h1 align="center"> An EigenLayer AVS 🌐 </h1>
 
 **A simple Hello World AVS for EigenLayer with the BLS-based Contract Configuration**
@@ -38,11 +58,13 @@ Once `cargo-tangle` is installed, you can create a new project with the followin
 ```sh
 cargo tangle blueprint create --name <project-name> --eigenlayer <type>
 ```
+
 where `<project-name>` is the name of the project that will be generated, and `<type>` is BLS or ECDSA. If you aren't sure which type to use, you likely want the default: BLS. After all, this is the template for BLS. If you don't specify a type, it will default to BLS.
 
-Upon running the above command, you will be prompted with questions regarding the setup for your generated project. If you aren't sure for any of them, you can just hit enter to select the default for that questions. 
+Upon running the above command, you will be prompted with questions regarding the setup for your generated project. If you aren't sure for any of them, you can just hit enter to select the default for that questions.
 
 ### Note
+
 If Soldeer fails to update/install the necessary dependencies, you may need to run it manually with the following command:
 
 ```bash
@@ -53,9 +75,9 @@ forge soldeer update -d
 
 Licensed under either of
 
-* Apache License, Version 2.0
+- Apache License, Version 2.0
   ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-* MIT license
+- MIT license
   ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
 at your option.

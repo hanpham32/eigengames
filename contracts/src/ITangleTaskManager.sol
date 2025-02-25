@@ -5,38 +5,36 @@ import "eigenlayer-middleware/src/libraries/BN254.sol";
 
 interface ITangleTaskManager {
     // EVENTS
-    event NewTaskCreated(uint32 indexed taskIndex, Task task);
-
-    event TaskResponded(
-        TaskResponse taskResponse,
-        TaskResponseMetadata taskResponseMetadata
+    event GaiaNodeStarted(
+        uint32 indexed taskId,
+        string network,
+        string dataDir,
+        address indexed operator,
+        uint256 timestamp
     );
 
-    event TaskCompleted(uint32 indexed taskIndex);
-
-    event TaskChallengedSuccessfully(
-        uint32 indexed taskIndex,
-        address indexed challenger
-    );
-
-    event TaskChallengedUnsuccessfully(
-        uint32 indexed taskIndex,
-        address indexed challenger
+    event GaiaNodeStopped(
+        uint32 indexed taskId,
+        address indexed operator,
+        uint256 timestamp
     );
 
     // STRUCTS
-    struct Task {
-        uint256 numberToBeSquared;
-        uint32 taskCreatedBlock;
-        // task submitter decides on the criteria for a task to be completed
-        // note that this does not mean the task was "correctly" answered (i.e. the number was squared correctly)
-        //      this is for the challenge logic to verify
-        // task is completed (and contract will accept its TaskResponse) when each quorumNumbers specified here
-        // are signed by at least quorumThresholdPercentage of the operators
-        // note that we set the quorumThresholdPercentage to be the same for all quorumNumbers, but this could be changed
-        bytes quorumNumbers;
-        uint32 quorumThresholdPercentage;
+
+    struct GaiaNodeConfig {
+        string network;
+        string dataDir;
+        bool isRunning;
+        uint256 startTime;
+        address operator;
     }
+
+    struct GaiaNodeStatus {
+        bool isRunning;
+        uint256 uptime;
+        address operator;
+    }
+    
 
     // Task response is hashed and signed by operators.
     // these signatures are aggregated and sent to the contract as response.
@@ -56,24 +54,12 @@ interface ITangleTaskManager {
     }
 
     // FUNCTIONS
-    // NOTE: this function creates new task.
-    function createNewTask(
-        uint256 numberToBeSquared,
-        uint32 quorumThresholdPercentage,
-        bytes calldata quorumNumbers
-    ) external;
+    // NOTE: this function starts a new Gaia node.
+    function startGaiaNode(
+      string memory network,
+      string memory dataDir
+    ) external returns (uint32 taskId);
 
-    /// @notice Returns the current 'taskNumber' for the middleware
-    function taskNumber() external view returns (uint32);
-
-    // // NOTE: this function raises challenge to existing tasks.
-    function raiseAndResolveChallenge(
-        Task calldata task,
-        TaskResponse calldata taskResponse,
-        TaskResponseMetadata calldata taskResponseMetadata,
-        BN254.G1Point[] memory pubkeysOfNonSigningOperators
-    ) external;
-
-    /// @notice Returns the TASK_RESPONSE_WINDOW_BLOCK
-    function getTaskResponseWindowBlock() external view returns (uint32);
+    // NOTE: this function stop the Gaia node.
+    function stopGaiaNode(uint32 taskId) external;
 }
