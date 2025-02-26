@@ -1,15 +1,12 @@
 use blueprint::{TangleTaskManager, TASK_MANAGER_ADDRESS};
-use blueprint_sdk::alloy::primitives::{address, Address, U256};
-use blueprint_sdk::config::ContextConfig;
-use blueprint_sdk::logging::{info, warn};
+use blueprint_sdk::alloy::primitives::Address;
+use blueprint_sdk::logging::info;
 use blueprint_sdk::macros::main;
 use blueprint_sdk::runners::core::runner::BlueprintRunner;
 use blueprint_sdk::runners::eigenlayer::bls::EigenlayerBLSConfig;
 use blueprint_sdk::utils::evm::get_provider_http;
 
-use color_eyre::eyre::Context;
-use my_eigenlayer_avs_1::{self as blueprint, start_gaia_node};
-use structopt::StructOpt;
+use my_eigenlayer_avs_1::{self as blueprint};
 
 #[main(env)]
 async fn main() {
