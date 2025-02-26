@@ -1,9 +1,9 @@
 // send-tx.ts
-import { ethers } from "ethers";
+import { ethers, Contract } from "ethers";
 
 async function main(): Promise<void> {
   // Connect to the Ethereum provider
-  const provider = new ethers.JsonRpcProvider("http://localhost:55004");
+  const provider = new ethers.JsonRpcProvider("http://localhost:55000");
 
   // Set up wallet with private key
   const privateKey =
@@ -13,6 +13,8 @@ async function main(): Promise<void> {
   // Define the contract ABI (just the function we need)
   const abi = [
     "function startGaiaNode(string memory network, string memory dataDir) external returns (uint32)",
+    "function stopGaiaNode(uint32 taskId) external",
+    "function latestTaskNum() external view returns (uint32)",
   ];
 
   // Create contract instance
@@ -22,19 +24,38 @@ async function main(): Promise<void> {
   console.log("Sending transaction...");
 
   try {
-    // Call the contract function
-    const tx = await contract.startGaiaNode("testnet", "data/gaia/node1");
-    console.log("Transaction hash:", tx.hash);
-
-    // Wait for transaction to be mined
-    const receipt = await tx.wait();
-    console.log("Transaction mined in block:", receipt.blockNumber);
-
-    // Note: The return value of the function (uint32) is not directly available in the receipt
-    // You would need a separate call to get the returned value if stored in the contract
+    const latestTaskId = await contract.latestTaskNum();
+    console.log("Latest task id:", latestTaskId);
+    const tx = await stopGaiaNode(contract, latestTaskId);
   } catch (error) {
     console.error("Transaction failed:", error);
   }
+}
+
+// Function to send a transaction to start a Gaia node
+// Returns a tx receipt
+async function startGaiaNode(contract: Contract): Promise<any> {
+  // Call the contract function
+  const tx = await contract.startGaiaNode("testnet", "data/gaia/node1");
+  console.log("Transaction hash:", tx.hash);
+
+  // Wait for transaction to be mined
+  const receipt = await tx.wait();
+  console.log("Transaction mined in block:", receipt.blockNumber);
+  return receipt;
+}
+
+// Function to send a transaction to start a Gaia node
+// Returns a tx receipt
+async function stopGaiaNode(contract: Contract, taskId: number): Promise<any> {
+  // Call the contract function
+  const tx = await contract.stopGaiaNode(taskId);
+  console.log("Transaction hash:", tx.hash);
+
+  // Wait for transaction to be mined
+  const receipt = await tx.wait();
+  console.log("Transaction mined in block:", receipt.blockNumber);
+  return receipt;
 }
 
 main().catch((error: any) => {
