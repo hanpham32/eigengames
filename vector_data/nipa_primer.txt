@@ -1,0 +1,1765 @@
+Measuring the Economy
+
+A Primer on GDP and
+the National Income and
+Product Accounts
+
+Concepts
+Framework
+Measures
+Interactive Access
+
+December 2015
+
+Measuring the Economy
+A Primer on GDP and the National Income and Product Accounts
+
+U.S. DEPARTMENT OF COMMERCE
+Penny S. Pritzker
+
+Secretary
+
+ECONOMICS AND STATISTICS ADMINISTRATION
+Ken Arnold
+
+Acting Under Secretary for Economic Affairs
+
+BUREAU OF ECONOMIC ANALYSIS
+Brian C. Moyer
+
+Director
+
+December 2015
+
+www.bea.gov
+
+Acknowledgments
+Stephanie H. McCulla and Shelly Smith of the National Income and Wealth Division, Bureau of
+Economic Analysis (BEA), U.S. Department of Commerce, prepared this Primer.
+Brent R. Moulton, Associate Director for National Economic Accounts at BEA, and Carol E.
+Moylan, former Chief of the National Income and Wealth Division at BEA provided overall guidance.
+
+Preface
+This paper introduces new users to the basics of the U.S. national income and product accounts
+(NIPAs). It discusses the economic concepts that underlie the NIPAs, and it describes the seven
+NIPA summary accounts. The Primer also provides a brief overview of the derivation of the NIPA
+measures and a list of references for further information.
+Comments and questions about the NIPA Primer are invited. Please contact BEA’s National
+Income and Wealth Division by e-mail at GDPniwd@bea.gov.
+
+i
+
+Contents
+Acknowledgments and Preface ...............................................................................................................
+
+i
+
+Measuring the Economy: A Primer on GDP and the National Income and Product Accounts..........
+
+1
+
+Conceptual Basis of the Accounts ..........................................................................................................
+The circular flow of income and expenditures ...........................................................................................
+Economic concepts in the NIPAs...............................................................................................................
+Output .......................................................................................................................................................
+Exhibit 1 ..................................................................................................................................................
+Income ......................................................................................................................................................
+Box An Imputation for the Services of Owner-Occupied Housing ............................................................
+
+2
+2
+2
+2
+3–4
+4
+5
+
+NIPA Sectors ..............................................................................................................................................
+
+6
+
+The T-account ............................................................................................................................................
+Table Income and Outlay Account for an Individual..................................................................................
+
+7
+7
+
+The Seven NIPA Summary Accounts ......................................................................................................
+Account 1. Domestic Income and Product Account ..................................................................................
+Account 2. The Private Enterprise Income Account .................................................................................
+Account 3. The Personal Income and Outlay Account ..............................................................................
+Account 4. The Government Receipts and Expenditures Account ...........................................................
+Account 5. Foreign Transactions Current Account ....................................................................................
+Account 6. Domestic Capital Account .......................................................................................................
+Account 7. Foreign Transactions Capital Account.....................................................................................
+Table Summary National Income and Product Accounts, 2012................................................................
+
+8
+8
+11
+11
+12
+12
+12
+13
+9–10
+
+Derivation of the NIPA Measures .............................................................................................................
+Estimate “vintages” ...................................................................................................................................
+Current-dollar estimates............................................................................................................................
+Quantity and price estimates.....................................................................................................................
+
+14
+14
+14
+14
+
+Additional Reading....................................................................................................................................
+Concepts, framework, and history.............................................................................................................
+Estimating methods and source data........................................................................................................
+Quantity, price, and chained-dollar indexes...............................................................................................
+Reliability of the estimates ........................................................................................................................
+
+16
+16
+16
+16
+16
+
+Accessing the NIPA Estimates Interactively...........................................................................................
+17
+NIPA table arrangement ............................................................................................................................
+17
+NIPA table numbering system ...................................................................................................................
+17
+Example .................................................................................................................................................... 18–21
+
+ii
+
+NIPA Primer
+
+1
+
+Measuring the Economy
+A Primer on GDP and the National Income and Product Accounts
+How fast is the economy growing? Is it speeding up or slowing down? How does the trade deficit affect economic
+growth? What’s happening to the pattern of spending on goods and services in the economy?
+To answer these types of questions about the economy, economists and policymakers turn to the national income
+and product accounts (NIPAs) produced by the Bureau of Economic Analysis (BEA). The NIPAs are a set of economic
+accounts that provide information on the value and composition of output produced in the United States during a
+given period and on the types and uses of the income generated by that production. Featured in the NIPAs is gross
+domestic product (GDP), which measures the value of the goods and services produced by the U.S. economy in a
+given time period.
+GDP is one of the most comprehensive and closely watched economic statistics: It is used by the White House and
+Congress to prepare the Federal budget, by the Federal Reserve to formulate monetary policy, by Wall Street as an
+indicator of economic activity, and by the business community to prepare forecasts of economic performance that
+provide the basis for production, investment, and employment planning.
+But to fully understand an economy’s performance, one must ask not only “What is GDP?” (or “What is the value
+of the economy’s output?”), but other questions such as: “How much of the increase in GDP is the result of inflation
+and how much is an increase in real output?” “Who is producing the output of the economy?” “What output are they
+producing?” “What income is generated as a result of that production?” and “How is that income used (to consume
+more output, to invest, or to save for future consumption or investment)?”
+Thus, while GDP is the featured measure of the economy’s output, it is only one summary measure. The answers to
+the follow-up questions are found by looking at other measures found in the NIPAs; these include personal income,
+corporate profits, and government spending. Because the economy is so complex, the NIPAs simplify the information
+by organizing it in a way that illustrates the processes taking place.
+This paper is intended as an introduction to the NIPAs for the new user. It begins by considering the transactions
+that occur in a simple economy in order to introduce the economic concepts that underlie the NIPAs. Next, it
+describes the NIPA sectors for which economic activity is measured and the use of T-accounts to illustrate economic
+flows. The third section introduces the seven summary accounts of the NIPAs and includes descriptions of the significant aggregates that they contain. The fourth section provides an overview of the derivation of the NIPA measures,
+including inflation-adjusted, or “real,” estimates. The last section provides references, organized by subject area, for
+users interested in moving beyond an introduction to more in-depth or advanced information about economic
+accounting and the NIPAs.
+
+2
+
+NIPA Primer
+
+Conceptual Basis of the Accounts
+The circular flow of income and expenditures
+
+To better understand the economy and the NIPAs, consider a simple economy consisting solely of businesses
+and individuals, as reflected in the circular flow diagram
+below:
+
+and the contributions of these flows to the accumulation
+of fixed assets.
+The NIPAs provide a framework for presenting actual
+measures of these economic flows.
+Output
+
+The Circular Flow
+Goods and Services
+Expenditures
+
+Businesses
+
+Individuals
+
+Income
+Labor
+
+In this simple economy, individuals provide the labor
+that enables businesses to produce goods and services.
+These activities are represented by the green lines in the
+diagram above.
+Alternatively, one can think of these transactions in
+terms of the monetary flows that occur. Businesses provide individuals with income (in the form of compensation) in exchange for their labor. That income is, in turn,
+spent on the goods and services businesses produce.
+These activities are represented by the blue lines in the
+diagram above.
+Economic concepts in the NIPAs
+
+The circular flow diagram illustrates the interdependence
+of the “flows,” or activities, that occur in the economy,
+such as the production of goods and services (or the
+“output” of the economy) and the income generated
+from that production. The circular flow also illustrates
+the equality between the income earned from production
+and the value of goods and services produced.
+Of course, the total economy is much more complicated than the illustration above. An economy involves
+interactions between not only individuals and businesses,
+but also Federal, state, and local governments and residents of the rest of the world. Also not shown in this simple illustration of the economy are other aspects of
+economic activity such as investment in capital (produced—or fixed—assets such as structures, equipment,
+research and development, and software), flows of financial capital (such as stocks, bonds, and bank deposits),
+
+The featured measure of output in the NIPAs is GDP.
+GDP measures the market value of the goods, services,
+and structures produced by the nation’s economy in a
+particular period. While GDP is used as an indicator of
+economic activity, it is not a measure of well-being (for
+example, it does not account for rates of poverty, crime,
+or literacy).
+The following are several points to keep in mind when
+considering the output of the economy.
+1. GDP includes market production and some nonmarket production.
+GDP is composed of goods and services that are produced for sale in the “market”—the generic term referring to the forum for economic transactions—and of
+nonmarket goods and services—those that are not sold in
+the market, such as the defense services provided by the
+federal government, the education services provided by
+local governments, the emergency housing or health care
+services provided by nonprofit institutions serving
+households (such as the Red Cross), and the housing services provided by and for persons who own and live in
+their home (referred to as “owner-occupants”). However,
+not all productive activity is included in GDP. Some
+activities, such as the care of one's own children, unpaid
+volunteer work for charities, and illegal activities, are not
+included because data are not available to accurately
+measure their value.
+2. Whenever possible, GDP is valued at market prices.
+The NIPAs value market goods and services using
+prices set by the market. This approach provides a common unit of measurement (dollars) that facilitates comparisons of the various goods and services that make up
+economic activity. Using market values also facilitates the
+analysis of the impacts on the economy of events such as
+the implementation of government programs or the
+occurrence of natural disasters.
+In some cases, market prices do not fully reflect the
+value of a good or service, and may include some types of
+services where an actual exchange has not occurred. In
+these cases, the value of the good or service produced is
+
+NIPA Primer
+
+“imputed” from similar market transactions. Imputations measure the value of goods and services that are not
+fully reflected in market prices. Examples of imputed
+measures in the NIPAs include the value of compensation-in-kind (such as meals provided by employers) and
+the value of owner-occupied housing. For more information on owner-occupied housing, see the box on page 14,
+“An Imputation for the Services of Owner-Occupied
+Housing.”
+In cases where there are no similar market transactions
+available to impute a value of the goods or service being
+produced, the output of these services is valued by estimating the costs (such as employee compensation and
+purchases of materials and supplies) of producing the
+good or service.
+3. GDP is a measure of current production, not sales.
+In the NIPAs, the measure of output refers to output
+produced in that period, regardless of when that output is
+sold. For example, an automaker may produce a car in
+one period and sell it in a later period. In the first period,
+the production of the car is recorded in GDP as an addition to inventories, a component of private enterprise
+investment. In the later period, the sale of the car is
+recorded twice, both as a consumer expenditure and as a
+withdrawal from inventories. As no new production took
+place, GDP is not affected.
+4. GDP is equal to the value of goods and services for
+“final” users.
+The measurement of GDP captures the value of products that are consumed and not used in a later stage of
+production, those that are sold, given away, or otherwise
+transferred to foreign residents, those that are used to
+produce other goods and that last more than a year, and
+those that may be inventoried for future consumption.
+When considering the production process for the entire
+economy, the value of intermediate products—that is,
+goods and services that are used as inputs in the production process (and will not contribute to future production)—is excluded, so that the measure of output is an
+unduplicated total.
+For example, consider a simple economy with one
+product, bread, which is produced in three stages:
+1. Wheat is grown, harvested, and sold for $1 by a
+farmer (for simplification, it is assumed the
+wheat is produced using no intermediate products);
+2. The wheat is used by a miller to produce flour,
+which is sold for $3; and
+3. The flour is used by a baker to produce bread,
+which is sold to a consumer for $7.
+
+3
+
+This information is summarized in exhibit 1:
+
+Exhibit 1
+Intermediate
+product
+
+Income
+
+Sales
+
+$0
+
+$1
+
+$1
+
+
+
+$1
+
+$2
+
+$3
+
+Baker, bread
+
+$3
+
+$4
+
+$7
+
+Total
+
+$4
+
+$7
+
+$11
+
+Farmer, wheat
+
+
+
+When the miller purchases $1 worth of wheat from the
+farmer to produce flour and then sells the flour to the
+baker for $3, the $3 the miller charges for the flour
+includes the $1 price of the wheat (an intermediate product) plus the $2 value added by his own resources (in this
+example, his labor). When the baker makes the flour into
+bread and sells the bread to a consumer for $7, the $7 the
+baker charges includes the $3 value of the flour (an intermediate product) and the $4 value added by his own
+resources. The value of the ultimate product—the
+bread—is the price paid by the consumer ($7); the bread
+is recognized as the ultimate product because it is eaten
+by the consumer and not used in another production
+process. If the total sales of the wheat, the flour, and the
+bread were all included, the aggregate value ($1 + $3 +
+$7, or $11) would overstate the value of production by
+triple-counting the value of the wheat and double-counting the value of the flour.
+5. GDP can be measured in three different ways.
+The nature of economic activity reflected in the circular flow diagram suggests two ways to measure GDP.
+First, GDP can be measured as the sum of expenditures, or purchases, by final users. This is known as the
+expenditures approach (and is illustrated by the formula
+familiar to students of economics: GDP = Consumption + Investment + Government spending + eXports
+– iMports) and is used to identify the final goods and
+services purchased by persons, businesses, governments,
+and foreigners. Second, because the market price of a
+
+4
+
+NIPA Primer
+
+good or service will reflect all of the incomes earned and
+costs incurred in production, GDP can also be measured
+as the sum of these charges. This is known as the income
+approach and is used to examine the purchasing power of
+households and the financial status of business income.
+In addition, GDP can also be measured either as total
+sales less the value of intermediate inputs or as the sum of
+the “value added” at each stage of the production process.
+The value-added approach to measuring GDP is central to
+the U.S. industry accounts and is used to analyze the
+industrial composition of U.S. output.
+These three approaches can be illustrated using the
+information from exhibit 1.
+
+Exhibit 1
+Intermediate
+product
+
+Income =
+value added
+
+Sales =
+Total output
+
+$0
+
+$1
+
+$1
+
+
+
+$1
+
+$2
+
+$3
+
+Baker, bread
+
+$3
+
+$4
+
+$7
+
+Total
+
+$4
+
+$7
+
+$11
+
+Farmer, wheat
+
+
+
+6. GDP captures output produced in the United States.
+GDP is a measure of the goods, services, and structures produced by labor and property located within the
+United States (in the NIPAs, the United States comprises
+the 50 states and the District of Columbia). Thus, GDP
+includes the output of U.S. offices or establishments of
+foreign companies located in the United States, and it
+excludes the output of foreign offices or establishments of
+U.S. companies located outside the United States. This
+treatment aligns GDP with other key U.S. statistics associated with the domestic economy, such as population
+and employment.
+7. GDP is a “gross” measure.
+GDP reflects production in a given time period,
+regardless of whether that production is used for consumption, for investment in new fixed assets or inventories, or for replacing depreciated fixed assets. Economic
+depreciation, or the consumption of fixed capital (CFC),
+is a measure of the amount that would need to be “set
+aside” to cover the physical deterioration, normal obsolescence, and accidental damage (except that caused by a
+catastrophic event) of existing fixed assets. Subtracting
+CFC from GDP leaves “net domestic product,” which is a
+measure of current production that excludes the investment that is necessary to replace existing fixed assets as
+they wear out or become obsolete. Thus, net domestic
+product is a measure that indicates how much of the
+Nation’s output is available for consumption or for adding to the Nation’s wealth.
+Income
+
+Output (sum of final expenditures) = Total income earned from production
+Value added = Total output – Total intermediate products
+
+As demonstrated in point 4 above, GDP can be
+derived as the sum of final expenditures for bread,
+which is the $7 spent by consumers
+● It can be derived as the sum of the incomes earned in
+the production of bread—that is, as the sum of the $1
+earned by the farmer for his labor, the $2 earned by
+the miller for his labor, and the $4 earned by the baker
+for his labor.
+● It can be derived as the value added, or total output less intermediate products, across all industries—that is, the $1 of output by the farmer, plus the
+$3 of output by the miller, plus the $7 of output by the
+baker minus the $0 of intermediate inputs by the
+farmer, minus the $1 of intermediate inputs by the
+miller, minus the $3 of intermediate inputs by the
+baker ($11 – $4 = $7).
+●
+
+In addition to GDP, which is measured using the final
+expenditures approach, the NIPAs also present gross
+domestic income (GDI), which is GDP measured using
+the income approach. As noted above, this approach
+measures output as the sum of the incomes accruing to
+the owners of the factors of production (capital and
+labor) and to governments. In other words, as the circular
+flow diagram suggests, income is equal to product (GDI
+is equal to GDP).
+The NIPAs also include other measures of income.
+Two of these are gross national income (GNI) and personal income. GNI, the most comprehensive measure of a
+nation’s income, is calculated as GDI plus income
+receipts from the rest of the world less income payments
+to the rest of the world. As such, it is a measure of income
+from production that accrues to U.S. residents, regardless
+of where that productive activity is located. Its companion production measure is gross national product
+(GNP). Personal income is the income received by persons from participation in production (including compensation, proprietors’ income, and interest and
+dividend income) and from transfers from government
+
+NIPA Primer
+
+and businesses. Personal income is closely monitored
+both as an indicator of economic activity and as a predictor of future spending.
+It is important to note that the income measures in the
+
+5
+
+NIPAs do not include gains or losses resulting from
+changes in the prices of assets (that is, capital gains or
+losses), because a change in the price of an asset does not
+represent income from production.
+
+An Imputation for the Services of Owner-Occupied Housing
+Within GDP, personal consumption expenditures tenant rather than occupied by the homeowner (and
+include the consumption of housing services by persons would decrease if a home were occupied by the homewho own the housing that they occupy (referred to as owner rather than rented to a tenant).
+“owner-occupants”) as well as by those who rent their
+To prevent such a variation in GDP from occurring,
+housing. The imputation ensures that GDP will not the NIPAs treat home ownership as if the owner-occuchange if a house is rented by a landlord or is lived in by pants rent their homes to themselves. The value of these
+its owner.
+housing services is based on the rents charged for similar
+When a landlord provides housing services to a tenant tenant-occupied housing. Therefore, GDP is based on the
+in exchange for payment—rent—the transaction appears number and quality of housing units in service and will
+on the product side of the accounts as personal con- not change if a house switches from being rented by a
+sumption expenditures for housing services and on the landlord to being lived in by its owner. On the income
+income side as rental income of persons. If the NIPAs side of the accounts, the owner-occupant is treated simiwere strictly constrained to items traded on the market, larly to a business. Expenses associated with owner-occuthe measurement would end there. That is, the housing pied housing—such as depreciation, maintenance and
+services provided to owner-occupants would be excluded repairs, property taxes, and mortgage interest—are
+from GDP because homeownership involves no market deducted from the value of the housing services, leaving a
+exchange of housing services for rent. Under this treat- profit-like remainder of income, “rental income of perment, GDP would increase if a home were rented to a sons.”
+
+6
+
+NIPA Primer
+
+NIPA Sectors
+From the NIPAs, one can determine who demands the
+goods and services that are produced, or one can examine
+who supplies the output being produced. Three major
+types of producers (or sectors) are recognized:
+Businesses. This sector engages in the production and
+sale of goods and services for profit, or at least for a price
+that approximates the costs of production. The sector
+comprises all for-profit corporate and noncorporate private entities and certain other entities, including mutual
+financial institutions, private noninsured pension funds,
+cooperatives, nonprofit organizations that primarily
+serve businesses, Federal Reserve banks, federally sponsored credit agencies, and government enterprises. Government enterprises are government agencies—such as
+the U.S. Postal Service or state government-run utilities—that cover a substantial portion of their operating
+costs by selling goods and services to the public.
+Households and institutions. This sector engages in
+the production of household services—that is, the housing services provided to homeowners, the goods and
+
+services provided by nonprofit institutions, and the compensation paid to domestic workers. The sector consists
+of households (families and unrelated individuals) and
+nonprofit institutions servings households (such as
+Goodwill Industries International).
+General governments. This sector receives revenues
+from taxes and other sources and uses these revenues to
+provide public goods and services, such as education and
+defense, and transfer payments, such as social security or
+Medicaid benefits. The sector includes Federal, state, and
+local government agencies, except for government enterprises.
+In addition, various measures are shown for subsets of
+these sectors (or subsectors). For example, separate
+measures are available for farm businesses, nonfarm businesses, corporations, noncorporate businesses, households, nonprofit institutions serving households, Federal
+Government, state and local governments, and pension
+plans.
+
+NIPA Primer
+
+7
+
+The T-account
+A T-account offers another way to illustrate the flows of
+the economy. More detailed than the circular flow diagram, it is a two-sided table that matches “sources” of
+funds on the right, or credit side, with “uses” on the left,
+or debit side. The entries on each side sum to a total
+shown at the bottom; the totals on each side are equal.
+The example below presents a very simple “income and
+outlay” account for an individual.
+The right side of the account shows an individual’s
+sources of income: Compensation (primarily wages and
+salaries) and the interest and dividends received from the
+ownership of assets (such as bonds or stocks). The sum of
+these sources is “total income.” The left side shows the
+individual’s uses of income: Consumption (purchases of
+goods and services), tax payments, and saving. The sum
+of these uses is “total expenditures and saving.” As with
+
+the circular flow diagram, the T-account shows that
+income equals expenditures.
+The structure of the T-account provides two analytical
+benefits. First, because it is an identity, it enables one
+to identify and estimate a “balancing item” between the
+two sides of the account: In the example, the difference between the individual’s total income on the right
+side and the individual’s consumption and tax payments on the left side provides a measure of the
+individual’s saving. Second, when constructed for more
+than one economic sector, the T-accounts provide a
+“double-entry” system in which a source of income in an
+account for one sector also appears as a use of income in
+the account of another sector. This accounting framework tracks the flow of economic activity from one sector
+to another.
+
+Income and Outlay Account for an Individual
+Uses of income
+
+Sources of income
+
+Consumption
+
+50
+
+Compensation
+
+70
+
+Tax payments
+
+20
+
+Interest received
+
+20
+
+Saving
+
+30
+
+Dividends received
+
+10
+
+Total Expenditures and Saving
+
+100
+
+Total Income
+
+100
+
+8
+
+NIPA Primer
+
+The Seven NIPA Summary Accounts
+In the NIPAs, the flows of production-related activities
+and income between sectors of the economy are summarized in the seven T-accounts presented below. The parenthetical numbers following each entry in an account
+indicate the table and line item location of the “counterentries,” or the flow from one sector of the economy to
+another.
+The first account, the Domestic Income and Product
+Account, displays the expenditure and income
+approaches to measuring GDP. The right-hand side of
+the account shows the final expenditures by consumers,
+private business, governments and foreigners. The lefthand side of the account shows the incomes that are generated in the production of that output.
+Account 2 presents the sources and uses of income for
+private enterprises (that is, corporate and noncorporate
+businesses and households and institutions in their role
+as producers). Account 3 presents personal income and
+outlays (that is, the income and outlays of households
+and nonprofit institutions, except for the outlays they
+make as producers). Account 4 presents government
+receipts and expenditures. Account 5, the Foreign Transactions Current Account, summarizes the current transactions relating to production, income, and outlays of the
+United States with the rest of the world. Accounts 6 and 7
+are capital accounts; they reflect the transactions that
+contribute to the accumulation of fixed assets and inventories by showing the Nation’s saving and the use of that
+saving for investment in fixed assets and inventories and
+for net lending or borrowing. Specifically, account 6 is a
+consolidated “saving-investment” account for the domestic sectors of the United States, and account 7 summarizes the capital transactions of the United States with the
+rest of the world.
+Account 1. Domestic Income and Product Account
+
+Account 1 is a production account for the United
+States: The right, or “product” side, of account 1 shows
+the Nation’s total final expenditures organized by
+type of expenditure, and the left, or “income” side,
+shows the incomes and other costs incurred in production. The summary measure of production on the right
+side—GDP—is defined as the market value of goods, services, and structures produced by the Nation’s economy
+during a given period less the value of the goods and services used up in production.
+The entries on the right side of account 1 show the
+approach used by BEA for deriving GDP: It is measured
+using the expenditures approach—that is, as the sum of
+
+purchases by final users. Specifically, GDP is the sum of
+the following measures:
+● Personal consumption expenditures consist of purchases
+of goods and services by households and by nonprofit
+institutions serving households (NPISHs). These
+goods and services include imputed expenditures on
+items such as the services of housing by a homeowner
+(the equivalent of rent), financial and insurance services for which there is no explicit charge, and medical
+care provided to individuals and financed by government or by private insurance.
+● Gross private domestic investment consists of purchases
+of fixed assets (structures, equipment, and intellectual
+property products) by private businesses that contribute to production and have a useful life of more than
+one year, of purchases of homes by households, and of
+private business investment in inventories. Inventory
+investment, which is shown as “change in private
+inventories,” includes the value of goods produced
+during a period but not sold, less sales of goods from
+inventories that were produced in previous periods. It
+is measured as ending period less beginning period
+inventories valued at current prices (and is equivalent
+to additions to, less withdrawals from, inventories).
+Intermediate inputs, which become an integral part of
+the final product and do not contribute to future production, are not included in investment.
+● Exports consists of goods and services that are sold,
+given away, or otherwise transferred by U.S. residents
+to residents of the rest of the world.
+● Imports, which is deducted in the calculation of GDP,
+consists of goods and services that are sold, given
+away, or otherwise transferred by the rest of the world
+to U.S. residents. The value of imports is already
+included in the other expenditure components of
+GDP, because market transactions do not distinguish
+the source of the goods and services. Therefore,
+imports must be deducted in order to derive a measure of total domestic output. Deducting total imports
+purchased by all sectors from total exports, rather
+than deducting each sector’s imports from its total
+expenditures, provides an analytically useful measure—net exports—that enables one to examine the
+effects of foreign trade on the economy.
+● Government
+consumption expenditures and gross
+investment measures final expenditures by Federal,
+state, and local governments. “Government consumption expenditures” represents the value of goods and
+services provided to the public by governments (such
+
+NIPA Primer
+
+9
+
+Summary National Income and Product Accounts, 2012
+[Billions of dollars]
+
+Account 1. Domestic Income and Product Account
+Line
+
+Line
+
+1 Compensation of employees, paid...............................................................
+2 Wages and salaries ..................................................................................
+3
+Domestic (3–12)....................................................................................
+4
+Rest of the world (5–15)........................................................................
+5 Supplements to wages and salaries (3–14) .............................................
+6 Taxes on production and imports (4–15)......................................................
+7 Less: Subsidies (4–8) ..................................................................................
+8 Net operating surplus...................................................................................
+9 Private enterprises (2–19)........................................................................
+10 Current surplus of government enterprises (4–28) ..................................
+11 Consumption of fixed capital (6–14).............................................................
+
+8,618.5
+6,938.9
+6,924.0
+14.9
+1,679.6
+1,132.1
+58.0
+4,131.7
+4,151.0
+–19.3
+2,534.2
+
+12 Gross domestic income ............................................................................
+
+16,358.5
+
+13 Statistical discrepancy (6–20)......................................................................
+
+–203.3
+
+14 Gross domestic product ...........................................................................
+
+16,155.3
+
+15 Personal consumption expenditures (3–3) ..................................................
+16 Goods.......................................................................................................
+17
+Durable goods ......................................................................................
+18
+Nondurable goods ................................................................................
+19 Services ...................................................................................................
+20 Gross private domestic investment..............................................................
+21 Fixed investment (6–2).............................................................................
+22
+Nonresidential.......................................................................................
+23
+Structures..........................................................................................
+24
+Equipment.........................................................................................
+25
+Intellectual property products............................................................
+26
+Residential............................................................................................
+27 Change in private inventories (6–4) .........................................................
+28 Net exports of goods and services ..............................................................
+29 Exports (5–1) ...........................................................................................
+30 Imports (5–13)..........................................................................................
+31 Government consumption expenditures and gross investment (4–1 plus
+6–3) ..........................................................................................................
+32 Federal .....................................................................................................
+33
+National defense...................................................................................
+34
+Nondefense ..........................................................................................
+35 State and local .........................................................................................
+
+11,050.6
+3,739.1
+1,191.9
+2,547.2
+7,311.5
+2,511.7
+2,449.9
+2,007.7
+448.0
+937.9
+621.7
+442.2
+61.8
+–565.7
+2,198.2
+2,763.8
+
+36 Gross domestic product ...........................................................................
+
+16,155.3
+
+3,158.6
+1,292.5
+817.8
+474.7
+1,866.1
+
+Account 2. Private Enterprise Income Account
+Line
+
+Line
+
+1 Income payments on assets ........................................................................
+2 Interest and miscellaneous payments (2–21 and 3–20 and 4–22 and
+5–17).....................................................................................................
+3 Dividend payments to the rest of the world (5–18) ...................................
+4 Reinvested earnings on foreign direct investment in the United States
+(5–19)....................................................................................................
+5 Business current transfer payments (net) ....................................................
+6 To persons (net) (3–24) ............................................................................
+7 To government (net) (4–25) ......................................................................
+8 To the rest of the world (net) (5–23 minus 5–11)......................................
+9 Proprietors’ income with IVA and CCAdj (3–17) ..........................................
+10 Rental income of persons with CCAdj (3–18) ..............................................
+11 Corporate profits with IVA and CCAdj..........................................................
+12 Taxes on corporate income ......................................................................
+13
+To government (4–16) ...........................................................................
+14
+To the rest of the world (5–23) ..............................................................
+15 Profits after tax with IVA and CCAdj .........................................................
+16
+Net dividends (3–21 plus 4–23) ............................................................
+17
+Undistributed corporate profits with IVA and CCAdj (6–12) ..................
+
+2,741.7
+
+18 Uses of private enterprise income...........................................................
+
+6,611.2
+
+2,501.7
+152.3
+87.6
+104.7
+42.7
+72.6
+–10.6
+1,241.4
+525.3
+1,998.2
+447.6
+415.6
+32.0
+1,550.5
+859.4
+691.2
+
+19 Net operating surplus, private enterprises (1–9) .........................................
+20 Income receipts on assets...........................................................................
+21 Interest (2–2 and 3–4 and 4–7 and 5–5)..................................................
+22 Dividend receipts from the rest of the world (5–6) ...................................
+23 Reinvested earnings on U.S. direct investment abroad (5–7) ..................
+
+4,151.0
+2,460.2
+1,809.9
+331.6
+318.7
+
+24 Sources of private enterprise income.....................................................
+
+6,611.2
+
+Account 3. Personal Income and Outlay Account
+Line
+1 Personal current taxes (4–14) ......................................................................
+2 Personal outlays...........................................................................................
+3 Personal consumption expenditures (1–15) .............................................
+4 Personal interest payments (2–21 and 3–20 and 4–22 and 5–17)...........
+5 Personal current transfer payments..........................................................
+6
+To government (4–26) ...........................................................................
+7
+To the rest of the world (net) (5–21 minus 5–9) ....................................
+8 Personal saving (6–11) ................................................................................
+
+9 Personal taxes, outlays, and saving ........................................................
+
+Line
+1,511.4
+11,457.0
+11,050.6
+240.6
+165.8
+91.1
+74.7
+946.7
+
+13,915.1
+
+10 Compensation of employees, received ........................................................
+11 Wages and salaries..................................................................................
+12
+Domestic (1–3) .....................................................................................
+13
+Rest of the world (5–3) .........................................................................
+14 Supplements to wages and salaries (1–5) ...............................................
+15
+Employer contributions for employee pension and insurance funds .....
+16
+Employer contributions for government social insurance......................
+17 Proprietors’ income with IVA and CCAdj (2–9) ............................................
+18 Rental income of persons with CCAdj (2–10)..............................................
+19 Personal income receipts on assets ............................................................
+20 Personal interest income (2–2 plus 3–4 plus 4–7 plus 5–5 less 2–21 less
+4–22 less 5–17) ....................................................................................
+21 Personal dividend income (2–16 less 4–23) ............................................
+22 Personal current transfer receipts ................................................................
+23 Government social benefits (4–4) ............................................................
+24 From business (net) (2–6) ........................................................................
+25 Less: Contributions for government social insurance, domestic (4–19).......
+
+8,609.9
+6,930.3
+6,924.0
+6.3
+1,679.6
+1,165.3
+514.3
+1,241.4
+525.3
+2,123.8
+
+26 Personal income........................................................................................
+
+13,915.1
+
+1,288.8
+834.9
+2,366.3
+2,323.6
+42.7
+951.6
+
+10
+
+NIPA Primer
+
+as defense or education). “Gross investment” consists
+of government purchases of structures, equipment,
+
+and intellectual property products to use in producing
+those goods and services. These expenditures do not
+
+Account 4. Government Receipts and Expenditures Account
+Line
+
+Line
+
+1 Consumption expenditures (1–31) ...............................................................
+2 Current transfer payments............................................................................
+3 Government social benefits ......................................................................
+4
+To persons (3–23) .................................................................................
+5
+To the rest of the world (5–22) ..............................................................
+6 Other current transfer payments to the rest of the world (5–22)...............
+7 Interest payments (2–21 and 3–20 and 4–22 and 5–17) .............................
+8 Subsidies (1–7) ............................................................................................
+9 Net government saving (6–13).....................................................................
+10 Federal......................................................................................................
+11 State and local..........................................................................................
+
+2,544.2
+2,396.9
+2,341.5
+2,323.6
+18.0
+55.3
+624.0
+58.0
+–1,310.8
+–1,090.1
+–220.8
+
+13 Current tax receipts .....................................................................................
+14 Personal current taxes (3–1) ....................................................................
+15 Taxes on production and imports (1–6)....................................................
+16 Taxes on corporate income (2–13)...........................................................
+17 Taxes from the rest of the world (5–10)....................................................
+18 Contributions for government social insurance............................................
+19 From persons (3–25)................................................................................
+20 From the rest of the world (5–10) .............................................................
+21 Income receipts on assets...........................................................................
+22 Interest and miscellaneous receipts (2–2 and 3–4 and 4–7 and 5–5) .....
+23 Dividends (2–16 less 3–21)......................................................................
+24 Current transfer receipts ..............................................................................
+25 From business (net) (2–7) ........................................................................
+26 From persons (3–6)..................................................................................
+27 From the rest of the world (5–10) .............................................................
+28 Current surplus of government enterprises (1–10)......................................
+
+3,077.2
+1,511.4
+1,132.1
+415.6
+18.2
+956.2
+951.6
+4.6
+128.0
+103.6
+24.4
+170.1
+72.6
+91.1
+6.5
+–19.3
+
+12 Government current expenditures and net saving .................................
+
+4,312.3
+
+29 Government current receipts ...................................................................
+
+4,312.3
+
+Account 5. Foreign Transactions Current Account
+Line
+
+Line
+
+1 Exports of goods and services (1–29) .........................................................
+2 Income receipts from the rest of the world...................................................
+3 Wage and salary receipts (3–13)..............................................................
+4 Income receipts on assets........................................................................
+5
+Interest (2–21 and 3–20 and 4–20).......................................................
+6
+Dividends (2–22)...................................................................................
+7
+Reinvested earnings on U.S. direct investment abroad (2–23) .............
+8 Current taxes, contributions for government social insurance, and transfer
+receipts from the rest of the world ............................................................
+9
+To persons (3–7) ...................................................................................
+10
+To government (4–17 plus 4–20 plus 4–27)..........................................
+11
+To business (2–8)..................................................................................
+
+12 Current receipts from the rest of the world .............................................
+
+2,198.2
+801.5
+6.3
+795.2
+144.9
+331.6
+318.7
+114.2
+83.7
+29.3
+1.2
+
+3,113.9
+
+13 Imports of goods and services (1–30) .........................................................
+14 Income payments to the rest of the world ....................................................
+15 Wage and salary payments (1–4).............................................................
+16 Income payments on assets.....................................................................
+17
+Interest (2–2 and 3–4 and 4–7) ............................................................
+18
+Dividends (2–3).....................................................................................
+19
+Reinvested earnings on foreign direct investment in the United States
+(2–4)..................................................................................................
+20 Current taxes and transfer payments to the rest of the world ......................
+21 From persons (3–7) ..................................................................................
+22 From government (4–5 plus 4–6) .............................................................
+23 From business (2–8 and 2–14).................................................................
+
+2,763.8
+563.9
+14.9
+549.0
+309.1
+152.3
+
+24 Balance on current account, NIPAs (7–1) ....................................................
+
+–468.2
+
+25 Current payments to the rest of the world and balance on current
+account, NIPAs .......................................................................................
+
+3,113.9
+
+87.6
+254.3
+158.4
+73.3
+22.6
+
+Account 6. Domestic Capital Account
+Line
+
+Line
+
+1 Gross domestic investment..........................................................................
+2 Private fixed investment (1–21) ................................................................
+3 Government fixed investment (1–31)........................................................
+4 Change in private inventories (1–27)........................................................
+5 Capital account transactions (net)................................................................
+6 Transfer payments for catastrophic losses (7–3) ......................................
+7 Other capital account transactions (7–4)..................................................
+8 Net lending or net borrowing (–), NIPAs (7–5) .............................................
+
+3,126.1
+2,449.9
+614.4
+61.8
+–6.5
+–7.7
+1.1
+–461.7
+
+10 Net saving....................................................................................................
+11 Personal saving (3–8)...............................................................................
+12 Undistributed corporate profits with IVA and CCAdj (2–17) .....................
+13 Net government saving (4–9) ...................................................................
+14 Plus: Consumption of fixed capital (1–11) ...................................................
+15 Private ......................................................................................................
+16 Government..............................................................................................
+17
+General government .............................................................................
+18
+Government enterprises .......................................................................
+19 Equals: Gross saving...................................................................................
+20 Statistical discrepancy (1–13)......................................................................
+
+327.0
+946.7
+691.1
+–1,310.8
+2,534.2
+2,038.0
+496.2
+436.1
+60.1
+2,861.2
+–203.3
+
+9 Gross domestic investment, capital account transactions (net), and
+net lending, NIPAs ..................................................................................
+
+2,657.9
+
+21 Gross saving and statistical discrepancy ...............................................
+
+2,657.9
+
+Account 7. Foreign Transactions Capital Account
+Line
+
+1 Balance on current account, NIPAs (5–24) ..............................................
+
+Line
+
+468.2
+
+CCAdj Capital consumption adjustment
+IVA Inventory valuation adjustment
+NIPAs National income and product accounts
+NOTE. The seven summary accounts constitute a double-entry accounting system in which each
+of the entries in a summary account appears again in that account or in one of the other summary
+accounts. The numbers in parentheses indicate these counterentries. In some cases, an entry may
+be equal to another entry in the summary accounts. For example, supplements to wages and sala-
+
+2 Capital account transactions (net) ...............................................................
+3 Transfer payments for catastrophic losses (6–6) ......................................
+4 Other capital account transactions (6–7) .................................................
+5 Net lending or net borrowing (–), NIPAs (6–8) .............................................
+
+–6.5
+–7.7
+1.1
+–461.7
+
+6 Capital account transactions (net) and net lending, NIPAs ...................
+
+468.2
+
+ries appears in account 1, line 5, and in account 3, line 14. In other cases, an entry may be equal to
+a combination of other entries (or of parts of other entries). For example, for private enterprise
+interest payments (account 2, line 2), the counterentry includes parts of private enterprise interest
+receipts (account 2, line 21), of personal interest income (account 3, line 20), of government
+interest receipts (account 4, line 22), and of interest payments to the rest of the world (account 5,
+line 17).
+
+NIPA Primer
+
+include government spending for social benefit programs (such as Medicaid), interest payments, and subsidies.
+The left—or income—side of the Domestic Income
+and Product Account measures output using the income
+approach, as the sum of all the incomes earned and costs
+incurred in production. Specifically, the left side shows
+GDI as the sum of the income earned—by labor
+(compensation of employees), by governments (taxes on
+production and imports less subsidies)—and by entrepreneurs (net operating surplus, which is a profits-like
+measure for private enterprises, described below, and for
+government enterprises), and the consumption of fixed
+capital. These entries appear again as sources of income
+in accounts 2 through 5.
+In theory, GDI should be equal to GDP. In practice,
+differences in the source data used to estimate the two
+measures result in a “statistical discrepancy,” which, in
+the NIPAS, is calculated as GDP less GDI. Because the
+source data used to develop the product-side estimates of
+the account are based on more comprehensive surveys
+and censuses, BEA considers them more reliable. Therefore, the statistical discrepancy appears as a component
+on the income side of the account to equate GDI with
+GDP.
+Account 2. The Private Enterprise Income Account
+
+The right side of account 2 shows the sources of private
+enterprise income, and the left side shows the distribution of this income among the various types of private enterprises, facilitating the subsequent presentation
+of related counter-entries on the sources side of the
+personal, government, and foreign accounts (accounts
+3, 4, and 5, respectively). Private enterprises include
+most of the business sector and part of the household
+sector—specifically, the ownership of housing. Private
+enterprises do not include government enterprises, as
+they are not privately owned; these are included in
+account 4.
+On the right side of account 2, sources of private
+enterprise income include both income from current
+production—net operating surplus—and income from
+the provision of financial capital—income receipts on
+assets. The net operating surplus reflects the incomes
+earned by all private enterprises from production after
+deducting operating costs (such as employee compensation and taxes on production and imports). Income
+receipts on assets reflects income that accrues to the providers of financial capital—holders of debt or stock. It
+comprises interest receipts, dividend receipts from the
+rest of the world, and businesses’ share of the reinvested
+earnings of their foreign affiliates. (Because the account
+consolidates the earnings of all U.S. businesses, receipts
+and payments of dividends between domestic businesses
+cancel each other.)
+The left side of the account shows the shares of income
+
+11
+
+among corporate enterprises (corporate profits), unincorporated enterprises owned by persons (proprietors’
+income), and homeowners (rental income of persons). It
+also shows summary information on the income distributed to the providers of financial capital (income payments on assets), not distinguished by sector in this
+account, and on the receipts of transfer payments.
+Proprietors’ income and rental income of persons
+reappear as sources of income on the right side of the
+personal income and outlay account, and net interest and
+dividend payments by enterprises equal the sum of net
+interest and dividends received by all other sectors. Only
+corporate profits (which is similar to net operating surplus but is measured after the deduction of interest payments) does not have a counter-entry on the sources side
+of a separate income and outlay account; a separate
+account for corporations is unnecessary because the
+detailed entries in account 2 show the use of this income
+for tax payments, dividend payments, and for undistributed corporate profits (which can be thought of as a measure of corporate saving).1
+Corporate profits is one of the most closely followed
+measures of economic activity because it provides a summary measure of U.S. corporate financial health. Further,
+undistributed profits, a source of retained earnings, provide much of the funding for investment in structures
+and equipment that contributes to the Nation’s productive capacity.
+Account 3. The Personal Income and Outlay
+Account
+
+The personal income and outlay account shows the
+sources and uses of income of individuals, enterprises
+that are owned by households, and nonprofit institutions
+that serve households.
+The right side of the account features the components
+of personal income, which is the income that persons
+receive in return for their provision of labor, land, and
+capital used in current production, plus current transfer
+receipts less contributions for government social insurance (domestic).).2 The largest source of income for individuals is compensation, which they receive for their
+labor; compensation includes employee and employer
+contributions to retirement and pension plans. Proprietors’ income is the income received by individuals for
+their labor and use of capital. Rental income is the
+income received by persons from their rental of property.
+Other components of personal income include interest
+income, dividend income, and current transfers. Current
+transfers include government social benefits payments
+1. Likewise, a separate account for the business sector as a whole—that is,
+private enterprises and government enterprises—is unnecessary because
+the sources and uses of government enterprise income are reflected in
+account 4.
+2. Personal income does not include holding gains or losses associated
+with changes in asset prices, as this type of change reflects a change in
+wealth rather than a change in productive activity.
+
+12
+
+for programs such as social security and Medicaid. Lastly,
+“contributions for government social insurance, domestic” (mandatory contributions to social insurance programs such as social security) is deducted in the
+measurement of personal income because the benefits
+accruing from these contributions are already reflected in
+current transfers.
+The left side of the account shows that personal
+income is used primarily for consumption of goods and
+services. The entry for “personal consumption expenditures” flows directly into account 1, and is, in fact, the
+largest component of GDP. In other words, households
+are the largest consumers of U.S. final product. The other
+entries illustrate that households also pay taxes and make
+interest and transfer payments. The difference between a
+household’s income and the sum of these outlays is its
+saving.
+Account 4. The Government Receipts and
+Expenditures Account
+
+This account is also an income and outlay account, showing—for Federal, state, and local governments (including
+government enterprises)—total receipts of income on the
+right side and the current uses of income (including saving) on the left side. The bulk of government income is
+derived from the receipt of taxes; governments also
+receive contributions for government social insurance,
+income receipts on assets, transfers (such as donations,
+fees, and fines), and the current surplus of government
+enterprises.
+The left side of the account features the uses of government receipts, which include current expenditures and
+government saving. Government transfer payments,
+which account for a large share of government current
+expenditures, are payments for which no current good or
+service is provided by the recipient, such as unemployment benefits. “Other current transfer payments to the
+rest of the world” consists of U.S. Government military and nonmilitary grants to foreign governments.
+Interest payments reflect interest paid on public debt, and
+subsidies refers to the provision of subsidies to businesses.
+The balancing item of the account is net government
+saving, which shows the difference between current
+receipts and current expenditures. Because of differences
+in coverage and timing, Federal Government net saving
+in the NIPAs is not equal to the well-known measure of
+the Federal Government’s unified budget surplus or deficit, which is an administrative cash-flow measure derived
+from the Treasury Department’s Federal budget statements and which includes both current and capital
+receipts and expenditures. The NIPA measure of government saving represents the portion of current expenditures that are covered by current receipts rather than by
+other methods of financing.
+
+NIPA Primer
+
+Account 5. Foreign Transactions Current Account
+
+Account 5 summarizes all of the current transactions of
+the United States with the rest of the world. It is shown
+from the perspective of the rest of the world; that is, U.S.
+imports from other countries are shown as a source of
+income for the rest of the world on the right side of the
+account, and exports of U.S. goods are shown as a use of
+that income on the left side. Similarly, payments made to
+the rest of the world from the left side of accounts 2, 3,
+and 4 (compensation, interest, dividends, taxes, or transfers) are shown as sources of foreign income, while the
+corresponding receipts by residents of the United States
+are shown as uses of foreign income. Exports and imports
+(as a deduction) flow directly into account 1 as components of GDP.
+The balancing item, “balance on current account,
+national income and product accounts,” is measured as
+“current receipts”—U.S. exports of goods and services
+and income and other receipts from the rest of the
+world—less “current payments”—U.S. imports of goods
+and services, income payments to the rest of the world,
+and current taxes and transfer payments to the rest of the
+world. Current taxes and transfer payments includes
+taxes paid to foreign governments and current transfers
+paid by persons, governments, and businesses. Because
+the balance on the current account includes the income
+receipts and payments and current taxes and transfer
+transactions with the rest of the world, it is a broader
+measure than the trade deficit (or surplus) of goods and
+services published jointly each month by the Census
+Bureau and BEA.
+The balance on the current account shows the extent
+to which current payments to the rest of the world are
+funded by current receipts; a positive balance suggests
+that current receipts from the rest of the world exceed
+current payments to the rest of the world, thereby allowing U.S. residents to lend or acquire other assets abroad.
+Conversely, any deficit must be funded through borrowing or the disposal of assets. Thus, the balance on the current account can be viewed as the acquisition of foreign
+assets by U.S. residents less the acquisition of U.S. assets
+by foreign residents.
+Account 6. Domestic Capital Account
+
+The domestic capital account shows the relationship
+between saving and investment in the U.S. economy. It
+can be used to answer key questions about the economy,
+such as: Are fixed assets being replaced? Is there a shortfall of saving? Which sector shows positive saving? Which
+sector invests?
+The right side of the account shows the sources of saving for the U.S. economy by sector: Personal saving,
+business saving (specifically, undistributed corporate
+profits), and government saving. The sum of each sector’s
+saving is net saving. Gross saving is net saving plus the
+
+NIPA Primer
+
+consumption of fixed capital. When gross saving is equal
+to or larger than consumption of fixed capital, the
+amount of saving is sufficient to cover the aging of fixed
+assets.
+The statistical discrepancy from account 1 appears
+again in this account. Given the theoretical equality
+between GDP and GDI, the statistical discrepancy can be
+viewed as actual (positive or negative) income that is not
+captured by the data used to measure GDI and, therefore,
+not distributed to the sectors. Instead, it is shown as a
+source of (positive or negative) saving in this account,
+and its addition leads to the summary measure, “gross
+saving and statistical discrepancy.”
+The left side of the account reflects the uses of that saving: Gross domestic investment (which reflects investment by private businesses and governments); capital
+account transactions; and “net lending or net borrowing
+(–), national income and product accounts.” Gross
+domestic investment—a measure of gross capital formation—is the purchase of new fixed assets plus the change
+in private inventories. Capital account transactions (net)
+are cash or in-kind transfer payments to the rest of the
+
+13
+
+world that are linked to the acquisition or disposition of a
+fixed asset; they provide an indirect measure of the net
+acquisition of foreign fixed assets by U.S. residents less
+the net acquisition of U.S. fixed assets by the rest of the
+world. The balancing item—net lending or net borrowing (–), national income and product accounts—is
+shown on the left side of the domestic capital account.
+When this item is negative, domestic investment cannot
+be completely funded from the Nation's own saving.
+When this item is positive, domestic saving is greater than
+what is needed for the Nation's own investment.
+Account 7. Foreign Transactions Capital Account
+
+This account summarizes the capital transactions with
+the rest of the world that already appear in account 6.
+While seemingly repetitive, the account shows the counter-entries for those transactions (and thus maintains the
+“double-entry” characteristic of the summary accounts);
+additionally, it is useful to separately identify current and
+capital transactions with the rest of the world in separate
+accounts.
+
+14
+
+NIPA Primer
+
+Derivation of the NIPA Measures
+A variety of data sources are used to estimate the NIPA
+measures. These data sources differ in availability, quality,
+coverage, and underlying definitions. As a consequence,
+the timing of the release of estimates and of subsequent
+revisions is based on the availability of these source data.
+Estimate “vintages”
+
+The data used by BEA are often available only after some
+lag. In general, the longer the lag time, the better the
+data are in terms of coverage and detail. Because both
+quick release and accuracy are highly valued, there is a
+constant tradeoff between quality and timing. As a
+result, BEA releases several “vintages” of NIPA estimates
+for any given quarter or year, with each vintage—or revision—being based on better source data.
+“Advance” current quarterly estimates (based on
+incomplete monthly data), are released near the end of
+the first month after the end of the quarter. At the end of
+each of the following two months, revised estimates are
+released that incorporate revised and newly available
+monthly and quarterly data; these releases are referred to
+as “second” and “third” quarterly estimates.
+Annual estimates of GDP that are first available as the
+sum of the quarterly estimates are revised in the “annual
+revision” (typically each July) and generally in the following two annual revisions; the period of revision can be
+extended beyond this three-year range if the revisions to
+earlier periods warrant immediate incorporation (rather
+than waiting for the next “comprehensive” revision,
+described below). Annual revisions are timed to incorporate newly available annual source data and quarterly
+data that are released too late to be used in the current
+quarterly estimates; improvements in methodology may
+also be incorporated.
+The revision cycle culminates, at about 5-year intervals, in a comprehensive revision of the NIPAs. Comprehensive revisions differ from annual revisions in that the
+data used for comprehensive revisions are based in large
+part on quiquennial censuses of economic activity, while
+the monthly, quarterly, and annual data discussed above
+are generally based on sample surveys. Additionally, comprehensive revisions have traditionally been used to
+introduce major improvements in definitions, estimating
+methods, and data presentations into the accounts, and
+the revision period is generally much longer than that for
+annual revisions, often back as far as 1929.
+
+Current-dollar estimates
+
+For most NIPA components, the current-dollar estimates
+are derived from source data that are “value data,” where
+value = price x quantity. Frequently, BEA—which does
+not collect much of its own data—must adjust the data
+that are collected by others, primarily government agencies, trade associations, and international organizations.
+Most source data are collected for purposes other than
+the estimation of the NIPAs, and therefore use definitions, population parameters, or time periods that differ
+from NIPA concepts. Much of the data must be adjusted
+by filling gaps in coverage or by using available data as
+proxies for the desired NIPA measure. For periods for
+which data are not available, NIPA estimates may be
+derived using existing estimates. For example, when
+annual source data are available and quarterly source data
+are not, the quarterly NIPA measures are often estimated
+by interpolation. For the periods beyond those covered by
+annual estimates (such as the most recent quarter), the
+quarterly estimates are derived by extrapolation. These
+interpolations and extrapolations are often based on
+“indicators”—related data that are used to approximate
+movements in the NIPA measures.
+Quantity and price estimates
+
+Changes over time in the current-dollar measures provided in the NIPAs may reflect a change in quantity, a
+change in price, or a combination of both. For some analyses, it is important to know these separate effects—for
+instance, to know how much of the change in GDP is due
+to changes in the quantities of goods and services without
+the influence of price changes.
+Therefore, the NIPAs provide separate estimates of
+changes in quantities and prices, derived as indexes that
+provide information on the change from some reference
+period. BEA describes estimates of quantities as “real”
+expenditures—for example “real GDP” or “real PCE.”
+The relation of an index level in one period to the index
+level in any other period shows the change in the index
+over time; indeed, the change in real GDP over time is the
+featured measure of economic activity. In addition, BEA
+provides measures of the contributions of various components (such as personal consumption expenditures or
+investment) to GDP growth.
+BEA also provides quantity measures in value
+terms—called chained dollars—by scaling the quantity
+
+NIPA Primer
+
+index to dollar levels. Specifically, the index in the reference year is set equal to the current-dollar level in the
+same year, and the change in the index in successive and
+previous periods is multiplied by the current-dollar level
+to form a time series in monetary terms.
+To facilitate the analysis of the drivers of change in the
+real estimates, BEA provides measures of the contribu-
+
+15
+
+tions of real components to the percent change in real
+aggregates. These are provided because the chained-dollar measures of components are not additive, and therefore, accurate measures of a component’s contribution to
+change cannot be derived from the chained-dollar measures.
+
+16
+
+NIPA Primer
+
+Additional Reading
+Approaching a subject as complex as the NIPAs is best done one step at a time. This paper provided the first step; for
+readers interested in continuing their education, this section offers references, organized by subject area.
+Concepts, framework, and history:
+
+NIPA Handbook: Concepts and Methods of the U.S. National Income and Product Accounts. Chapters 1–4 of this handbook describes the fundamental concepts, definitions, classifications, and accounting framework that underlie the
+national income and product accounts (NIPAs) of the United States.
+An Introduction to National Economic Accounting (MP–1): Bureau of Economic Analysis, Web site publication. This
+paper presents an in-depth derivation of the seven account summary of the NIPAs from generalized production,
+income and outlay, and saving-investment accounts for each sector and shows the links between the NIPAs and business or financial accounting principles.
+Streitweiller, Mary. “BEA Briefing: A Primer on BEA’s Input-Output Accounts,” SURVEY OF CURRENT BUSINESS 89 (June
+2009): 40–52.
+Concepts and Methods of the U.S. Input-Output Accounts. Bureau of Economic Analysis, September 2006. Web site
+publication.
+Lequiller, Francois and Derek Blades. Understanding National Accounts. 2nd edition, Organisation for Economic Cooperation and Development, 2014.
+Marcuss, Rosemary D. and Richard E. Kane. “U.S. National Income and Product Statistics: Born of the Great
+Depression and World War II.” SURVEY 87 (February 2007): 32–46. This article reviews the early impetus for the development of the accounts.
+Estimating methods and source data
+
+“Updated Summary of NIPA Methodologies.” This article is updated annually and is available on the Web site and in
+the SURVEY (usually in the November issue).
+NIPA Handbook: Concepts and Methods of the U.S. National Income and Product Accounts. Chapters 5–11 and 13,
+and other forthcoming chapters of this handbook describe the sources and methods used to prepare the expenditure
+and income components of the accounts.
+Holdren, Alyssa, “Gross Domestic Product and Gross Domestic Income: Revisions and Source Data,” SURVEY 94
+(June 2014): 1–11.
+In addition, numerous SURVEY articles describe annual and comprehensive revisions to the NIPAs. SURVEY articles
+and other methodology papers are available on the Web site; go to www.bea.gov, then select “National” and “Methodologies” or “Articles.”
+Quantity, price, and chained-dollar indexes
+
+A series of articles are available on the Web site; go to www.bea.gov and select “National,” “Articles,” and then scroll
+down to “Chain-type measures.” They include:
+Landefeld, J. Steven, Brent R. Moulton, and Cindy M. Vojtech. “Chained-Dollar Indexes: Issues, Tips on Their Use,
+and Upcoming Changes.” SURVEY 83 (November 2003): 8–16.
+Landefeld, J. Steven and Robert P. Parker. “BEA’s Chain Indexes, Time Series, and Measures of Long-Term Economic Growth.” SURVEY 77 (May 1997): 58–68.
+Reliability of the estimates
+
+A series of articles are available on the Web site; go to www.bea.gov and select “National,” “Articles,” and then scroll
+down to “Reliability.” They include:
+Fixler, Dennis J., Ryan Greenaway-McGrevy, and Bruce T. Grimm. “Revisions to GDP, GDI, and Their Major Components,” SURVEY 94 (August 2014): 1–23.
+Fixler, Dennis J., Ryan Greenaway-McGrevy, and Bruce T. Grimm. “Revisions to GDP, GDI, and Their Major Components,” SURVEY 91 (June 2011): 9–31.
+Fixler, Dennis J. and Bruce T. Grimm. Reliability of the GDP and GDI Estimates.” SURVEY 88 (February 2008):
+16–32.
+
+NIPA Primer
+
+17
+
+Accessing the NIPA Estimates Interactively
+The seven NIPA accounts only summarize the activities
+described by the full set of NIPA tables. The NIPA measures appear in much greater detail, (for example, by type
+of product, by type of expenditure, by sector, by industry,
+or by function) along with other important aggregates on
+BEA’s Web site at www.bea.gov.
+
+table. Table numbers are in the format “X.Y.Z,” where “X”
+indicates the NIPA table section, “Y” indicates the table
+number in the section, and “Z” indicates the type of estimate presented. The system is outlined below:
+Table
+
+Estimate Description
+
+The NIPA tables (over 350) are arranged in roughly the
+some order as the seven summary accounts. Section 1 of
+the NIPA tables includes summary income and product
+tables and other related aggregates. Section 2 includes
+tables on personal income and outlays. Section 3 includes
+tables on government receipts and expenditures. Section
+4 includes tables on transactions with the rest of the
+world. Section 5 contains tables on domestic saving and
+investment. Also included in the full set of NIPA tables,
+but not shown in the summary accounts, are tables (in
+section 6) that display estimates of income and employment by industry, and tables (in section 7) that feature
+supplemental economic measures, such as motor vehicle
+output and housing output, as well as reconciliations of
+NIPA measures to underlying source data.
+
+X.Y.1
+
+Percent change from preceding period in real estimates
+
+X.Y.2
+
+Contributions to percent change in real estimates
+
+X.Y.3
+
+Real estimates, quantity indexes
+
+X.Y.4
+
+Price indexes
+
+X.Y.5
+
+Current dollars
+
+X.Y.6
+
+Real estimates, chained dollars
+
+X.Y.7
+
+Percent change in prices
+
+X.Y.8
+
+Contributions to percent change in prices
+
+X.Y.9
+
+   
+
+NIPA table numbering system
+
+X.Y.10
+
+Percent shares of GDP (table section 1 only)
+
+X.Y.11
+
+Percent change from quarter one year ago
+(table section 1 only)
+
+NIPA table arrangement
+
+The NIPA tables are numbered so that users can quickly
+identify the type of estimate (such as current dollars,
+quantity indexes, and percent changes) shown in each
+
+
+
+An example of how to use BEA’s interactive NIPA tables follows.
+To access the interactive tables, please visit BEA’s Web site at www.bea.gov, or click here.
+
+18
+
+NIPA Primer
+
+Example
+
+To retrieve data on the percent changes in real consumer
+spending over time from BEA’s Web site (www.bea.gov),
+begin by selecting “Interactive Data” on BEA’s home page
+and then select “GDP & Personal Income” and finally,
+“Begin using the data...”(alternatively, begin by selecting
+“National,” then “Interactive tables: GDP and the
+
+National Income and Product Account Historical Tables,”
+and finally “Begin using the data.”
+Consumer spending, or personal consumption expenditures (PCE), is a component of the personal income
+and outlay account. Therefore, select “Section 2” from
+the list of NIPA table groups:
+
+NIPA Primer
+
+From the resulting list of section 2 tables, detailed PCE
+estimates are found in the NIPA table family 2.3. From
+the NIPA table numbering system described above, per-
+
+19
+
+cent changes in real PCE are found in tables ending in 1.
+Therefore, one would select NIPA table 2.3.1:
+
+20
+
+The interactive NIPA tables can be customized to meet
+a user’s specific needs. The “options” tab allows one to
+select the time period and the frequency (annuals, quarters, and in some cases, months) of the data. Note that
+the quarterly and monthly estimates are both seasonally
+adjusted and annualized. (Seasonal adjustment removes
+
+NIPA Primer
+
+variations that occur in the same month or quarter every
+year so that the remaining movements in the series better
+reflect trends in economic activity. Annualized growth
+rates are published to facilitate comparisons between estimates of different frequencies.)
+
+NIPA Primer
+
+The “download” tab presents several options for
+downloading the data, and the “print” table allows printing directly from the Web. There is also a “chart” feature
+
+21
+
+that allows the selection of one or more components
+from the selected table for charting; the charts can also be
+downloaded or printed:
