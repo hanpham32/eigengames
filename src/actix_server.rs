@@ -1,4 +1,4 @@
-use crate::manager::GaiaNodeManager;
+use crate::gaia_manager::GaiaNodeManager;
 use crate::types::GaiaNodeConfig;
 use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
 use serde::{Deserialize, Serialize};
@@ -21,15 +21,15 @@ async fn get_status(data: web::Data<AppState>) -> impl Responder {
     HttpResponse::Ok().json(status)
 }
 
-#[get("/info")]
-async fn get_info(data: web::Data<AppState>) -> impl Responder {
-    match data.node_manager.get_info().await {
-        Ok(info) => HttpResponse::Ok().json(info),
-        Err(e) => HttpResponse::InternalServerError().json(serde_json::json!({
-            "error": format!("Failed to get node info: {}", e)
-        })),
-    }
-}
+// #[get("/info")]
+// async fn get_info(data: web::Data<AppState>) -> impl Responder {
+//     match data.node_manager.get_info().await {
+//         Ok(info) => HttpResponse::Ok().json(info),
+//         Err(e) => HttpResponse::InternalServerError().json(serde_json::json!({
+//             "error": format!("Failed to get node info: {}", e)
+//         })),
+//     }
+// }
 
 #[post("/start")]
 async fn start_node(data: web::Data<AppState>, req: web::Json<StartNodeRequest>) -> impl Responder {
@@ -79,9 +79,9 @@ pub async fn run_server(
                 node_manager: Arc::clone(&node_manager),
             }))
             .service(get_status)
-            .service(get_info)
             .service(start_node)
             .service(stop_node)
+        // .service(get_info)
     })
     .bind(bind_address)?
     .run()

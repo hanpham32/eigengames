@@ -33,12 +33,34 @@ impl std::error::Error for GaiaError {}
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub enum GaiaNodeStatus {
     Running,
+    Starting,
     Stopped,
     Syncing {
         current_height: u64,
         target_height: u64,
     },
     Error(String),
+}
+
+impl fmt::Display for GaiaNodeStatus {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            GaiaNodeStatus::Running => write!(f, "Running"),
+            GaiaNodeStatus::Starting => write!(f, "Starting"),
+            GaiaNodeStatus::Stopped => write!(f, "Stopped"),
+            GaiaNodeStatus::Syncing {
+                current_height,
+                target_height,
+            } => {
+                write!(
+                    f,
+                    "Syncing (current_height: {}, target_height: {})",
+                    current_height, target_height
+                )
+            }
+            GaiaNodeStatus::Error(err_msg) => write!(f, "Error: {}", err_msg),
+        }
+    }
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

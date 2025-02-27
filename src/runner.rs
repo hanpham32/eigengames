@@ -1,5 +1,5 @@
 use crate::actix_server;
-use crate::manager::GaiaNodeManager;
+use crate::gaia_manager::GaiaNodeManager;
 use blueprint_sdk::logging::error;
 use std::sync::Arc;
 

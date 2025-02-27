@@ -34,15 +34,13 @@ contract TangleTaskManager is
     mapping(uint32 => GaiaNodeConfig) private nodeConfigs;
     mapping(address => uint32[]) private operatorTasks;
 
-    // mapping of task indices to all tasks hashes
-    // when a task is created, task hash is stored here,
-    // and responses need to pass the actual task,
-    // which is hashed onchain and checked against this mapping
+    // Task hashes
     mapping(uint32 => bytes32) public allTaskHashes;
 
-    // mapping of task indices to hash of abi.encode(taskResponse, taskResponseMetadata)
+    // Task responses
     mapping(uint32 => bytes32) public allTaskResponses;
 
+    // Task challenge status
     mapping(uint32 => bool) public taskSuccesfullyChallenged;
 
     address public aggregator;
@@ -99,8 +97,7 @@ contract TangleTaskManager is
         require(bytes(network).length > 0, "Network cannot be empty");
         require(bytes(dataDir).length > 0, "Data directory cannot be empty");
 
-        latestTaskNum++;
-        uint32 taskId = latestTaskNum;
+        uint32 taskId = ++latestTaskNum;
 
         nodeConfigs[taskId] = GaiaNodeConfig({
             network: network,
@@ -110,8 +107,6 @@ contract TangleTaskManager is
             operator: msg.sender
         });
 
-        operatorTasks[msg.sender].push(taskId);
-
         emit GaiaNodeStarted(
             taskId,
             network,
@@ -119,21 +114,31 @@ contract TangleTaskManager is
             msg.sender,
             block.timestamp
         );
-
-        return taskId;
     }
 
     function stopGaiaNode(
         uint32 taskId
     ) external override whenNotPaused validTaskId(taskId) onlyTaskOperator(taskId) {
-        require(nodeConfigs[taskId].isRunning, "Node not running");
+        GaiaNodeConfig storage config = nodeConfigs[taskId];
+        require(config.operator == msg.sender, "Only operator can stops the node");
+        require(nodeConfigs[taskId].isRunning, "Node is not running");
         
-        nodeConfigs[taskId].isRunning = false;
+        config.isRunning = false;
 
         emit GaiaNodeStopped(
             taskId,
             msg.sender,
             block.timestamp
         );
+    }
+
+    function getGaiaNodeStatus(uint32 taskId)
+      external view override returns (GaiaNodeStatus memory)
+    {
+      GaiaNodeConfig storage config = nodeConfigs[taskId];
+      require(config.operator != address(0), "Task ID does not exist");
+      GaiaNodeStatus memory status;
+      status.isRunning = config.isRunning;
+      return status;
     }
 }
