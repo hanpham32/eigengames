@@ -13,6 +13,7 @@ use std::sync::Arc;
 use tokio::sync::Mutex;
 
 pub mod actix_server;
+pub mod contexts;
 pub mod gaia_manager;
 pub mod qdrant;
 pub mod runner;
