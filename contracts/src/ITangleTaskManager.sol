@@ -62,4 +62,6 @@ interface ITangleTaskManager {
 
     // NOTE: this function stop the Gaia node.
     function stopGaiaNode(uint32 taskId) external;
+
+    function getGaiaNodeStatus(uint32 taskId) external view returns (GaiaNodeStatus memory);
 }

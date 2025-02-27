@@ -1,6 +1,6 @@
 ## Usage
 
-### Deploy
+### Deploy Your AVS
 
 ```bash
 cargo tangle blueprint deploy eigenlayer \
@@ -8,7 +8,7 @@ cargo tangle blueprint deploy eigenlayer \
     --ordered-deployment
 ```
 
-### Run
+### Run Your AVS
 
 ```bash
 TASK_MANAGER_ADDRESS=0x07882Ae1ecB7429a84f1D53048d35c4bB2056877 cargo tangle blueprint run \
@@ -17,6 +17,29 @@ TASK_MANAGER_ADDRESS=0x07882Ae1ecB7429a84f1D53048d35c4bB2056877 cargo tangle blu
     --keystore-path ./test-keystore
 
 ```
+
+### Deployment Configuration
+
+| **Contract**             | **Address**                                          |
+| ------------------------ | ---------------------------------------------------- |
+| **Registry Coordinator** | `0xc3e53f4d16ae77db1c982e75a937b9f60fe63690`         |
+| **Pauser Registry**      | Obtained from the beginning of the Deployment output |
+| **Initial Owner**        | `0x70997970C51812dc3A010C7d01b50e0d17dc79C8`         |
+| **Aggregator**           | `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`         |
+| **Generator**            | `0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65`         |
+| **AVS Directory**        | `0x0000000000000000000000000000000000000000`         |
+| **Rewards Coordinator**  | `0x0000000000000000000000000000000000000000`         |
+| **Stake Registry**       | `0x5fc8d32690cc91d4c39d9d3abcbd16989f875707`         |
+| **Tangle Task Manager**  | Obtained in the Deployment output                    |
+
+- **Pauser Registry**: The address is provided in the deployment output at the beginning of the logs.
+- **Tangle Task Manager**: The address is generated during the deployment process and can be found in the deployment output.
+- **Initial Owner**: This address has ownership privileges over the deployed contracts.
+- **Aggregator**: Responsible for aggregating task responses.
+- **Generator**: Used to create new tasks.
+- **Registry Cooridnator**: a smart contract responsible for managing the registration of operators in the EigenLayer ecosystem.
+- **Stake Registry**: manages the staking mechanism for operators.
+- **Rewards Coordinator**: manages rewarding mechanism for operators.
 
 # <h1 align="center"> An EigenLayer AVS 🌐 </h1>
 

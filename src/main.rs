@@ -1,22 +1,26 @@
 use blueprint::{TangleTaskManager, TASK_MANAGER_ADDRESS};
-use blueprint_sdk::alloy::primitives::{address, Address, U256};
-use blueprint_sdk::config::ContextConfig;
-use blueprint_sdk::logging::{info, warn};
+use blueprint_sdk::alloy::primitives::Address;
+use blueprint_sdk::logging::info;
 use blueprint_sdk::macros::main;
 use blueprint_sdk::runners::core::runner::BlueprintRunner;
 use blueprint_sdk::runners::eigenlayer::bls::EigenlayerBLSConfig;
 use blueprint_sdk::utils::evm::get_provider_http;
+use std::sync::Arc;
+use tokio::sync::Mutex;
 
-use color_eyre::eyre::Context;
-use my_eigenlayer_avs_1::{self as blueprint, start_gaia_node};
-use structopt::StructOpt;
+use my_eigenlayer_avs_1::gaia_manager::GaiaNodeManager;
+
+use my_eigenlayer_avs_1::{self as blueprint};
 
 #[main(env)]
 async fn main() {
     // Create your service context
     // Here you can pass any configuration or context that your service needs.
+    let gaia_manager = Arc::new(Mutex::new(GaiaNodeManager::new().unwrap()));
+
     let context = blueprint::ExampleContext {
         config: env.clone(),
+        gaia_manager,
     };
 
     // Get the provider
@@ -33,7 +37,6 @@ async fn main() {
         blueprint::StopGaiaNodeEventHandler::new(contract.clone(), context.clone());
 
     info!("Starting the event watcher ...");
-
     let eigen_config = EigenlayerBLSConfig::new(Address::default(), Address::default());
     BlueprintRunner::new(eigen_config, env)
         .job(start_gaia_node)

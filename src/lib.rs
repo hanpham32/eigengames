@@ -5,14 +5,19 @@ use blueprint_sdk::alloy::sol;
 use blueprint_sdk::config::GadgetConfiguration;
 use blueprint_sdk::event_listeners::evm::EvmContractEventListener;
 use blueprint_sdk::job;
+use blueprint_sdk::logging::{error, info, warn};
 use blueprint_sdk::macros::load_abi;
 use blueprint_sdk::std::sync::LazyLock;
 use serde::{Deserialize, Serialize};
+use std::sync::Arc;
+use tokio::sync::Mutex;
 
 pub mod actix_server;
-pub mod manager;
+pub mod gaia_manager;
 pub mod runner;
 pub mod types;
+
+use gaia_manager::GaiaNodeManager;
 
 type ProcessorError =
     blueprint_sdk::event_listeners::core::Error<blueprint_sdk::event_listeners::evm::error::Error>;
@@ -39,6 +44,7 @@ pub static TASK_MANAGER_ADDRESS: LazyLock<Address> = LazyLock::new(|| {
 #[derive(Clone)]
 pub struct ExampleContext {
     pub config: GadgetConfiguration,
+    pub gaia_manager: Arc<Mutex<GaiaNodeManager>>,
 }
 
 //// JOB DEFINITION TO HANDLE EVENTS
@@ -54,7 +60,7 @@ pub struct ExampleContext {
         pre_processor = start_gaia_pre_processor,
     ),
 )]
-pub fn start_gaia_node(
+pub async fn start_gaia_node(
     _context: ExampleContext,
     network: Option<String>,
     data_dir: Option<String>,
@@ -68,9 +74,23 @@ pub fn start_gaia_node(
     };
 
     let gaia_node_manager =
-        manager::GaiaNodeManager::new().expect("Failed to start Gaia Node Manager");
+        gaia_manager::GaiaNodeManager::new().expect("Failed to start Gaia Node Manager");
+    info!("Created a Gaia Node Manager");
 
-    gaia_node_manager.start(gaia_config);
+    // Store the manager in the context
+    {
+        let mut manager = _context.gaia_manager.lock().await;
+        *manager = Some(gaia_node_manager.clone()).unwrap();
+    }
+
+    // spawn a new thread to start gaia server
+    tokio::spawn(async move {
+        // this will stay running as long as this is running
+        if let Err(e) = gaia_node_manager.start(gaia_config).await {
+            error!("Error starting Gaia node: {:?}", e);
+        }
+    });
+
     Ok(())
 }
 
@@ -87,7 +107,7 @@ async fn start_gaia_pre_processor(
 }
 
 #[job(
-    id = 1,
+    id = 2,
     params(who),
     event_listener(
         listener = EvmContractEventListener<ExampleContext, TangleTaskManager::GaiaNodeStopped>,
@@ -96,19 +116,13 @@ async fn start_gaia_pre_processor(
         pre_processor = stop_gaia_pre_processor,
     ),
 )]
-pub async fn stop_gaia_node(context: ExampleContext, who: String) -> Result<String, Error> {
-    blueprint_sdk::logging::info!("Received request to stop Gaia node");
+pub async fn stop_gaia_node(_context: ExampleContext, who: String) -> Result<String, Error> {
+    info!("Received request to stop Gaia node");
 
-    let gaia_node_manager =
-        manager::GaiaNodeManager::new().expect("Failed to initialize Gaia Node Manager");
+    let gaia_node_manager = _context.gaia_manager.lock().await;
+    gaia_node_manager.stop().await?;
 
-    // Stop the Gaia node
-    gaia_node_manager
-        .stop()
-        .await
-        .expect("Failed to stop gaia node");
-
-    Ok(("Successfully stopped Gaia node").to_string())
+    Ok("Successfully stopped Gaia node".to_string())
 }
 
 /// Example pre-processor for handling inbound events
