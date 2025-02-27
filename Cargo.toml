@@ -2,21 +2,11 @@
 name = "my-eigenlayer-avs-1"
 version = "0.1.0"
 edition = "2021"
-description = "eigengames!"
-authors = ["Han <phamhan@uw.edu>"]
-license = "MIT OR Apache-2.0"
-homepage = "."
-repository = "https://github.com/hanpham32/my-eigenlayer-avs-1"
-readme = "README.md"
-categories = ["cryptography", "cryptography::cryptocurrencies"]
-keywords = ["tangle", "blueprint", "avs"]
-rust-version = "1.81"
 
 [dependencies]
 structopt = "0.3.26"
 openai_dive = "0.6"
 actix-web = "4.9.0"
-# Gadget
 blueprint-sdk = { git = "https://github.com/tangle-network/gadget.git", default-features = false, features = [
   "std",
   "eigenlayer",
@@ -26,7 +16,7 @@ blueprint-sdk = { git = "https://github.com/tangle-network/gadget.git", default-
 ] }
 serde = { version = "1.0.208", features = ["derive"] }
 thiserror = "2.0.11"
-tokio = { version = "1", features = ["io-util", "process", "rt", "macros", "sync"] }
+tokio = { version = "1", features = ["io-util", "process", "rt", "macros"] }
 color-eyre = "0.6.3"
 nix = "0.29.0"
 sysinfo = "0.33.1"
@@ -38,7 +28,10 @@ which = "7.0.2"
 anyhow = "1.0.96"
 qdrant-client = "1.13.0"
 pdf-extract = "0.8.2"
-
+eigensdk = { version = "0.4.0", features = ["full"] }
+tracing = "0.1.41"
+reqwest = "0.12.12"
+alloy-rpc-client = "0.11.1"
 
 [build-dependencies]
 blueprint-sdk = { git = "https://github.com/tangle-network/gadget.git", default-features = false, features = [
