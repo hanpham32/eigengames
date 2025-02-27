@@ -18,6 +18,25 @@ TASK_MANAGER_ADDRESS=0x07882Ae1ecB7429a84f1D53048d35c4bB2056877 cargo tangle blu
 
 ```
 
+## Qdrant
+
+```bash
+# to retrieve all collections
+curl -X GET http://localhost:6333/collections
+
+
+# to create a new collection
+curl -X PUT http://localhost:6333/collections/{collection_name} \
+  -H "Content-Type: application/json" \
+  -d '{
+        "vectors": {
+          "size": 768,            # Size of the vector (required)
+          "distance": "Cosine"   # Distance metric (e.g., Cosine, Euclidean, Dot)
+        }
+      }'
+
+```
+
 ### Deployment Configuration
 
 | **Contract**             | **Address**                                          |
