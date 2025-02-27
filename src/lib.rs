@@ -14,6 +14,7 @@ use tokio::sync::Mutex;
 
 pub mod actix_server;
 pub mod gaia_manager;
+pub mod qdrant;
 pub mod runner;
 pub mod types;
 

@@ -37,6 +37,7 @@ dirs = "6.0.0"
 which = "7.0.2"
 anyhow = "1.0.96"
 qdrant-client = "1.13.0"
+pdf-extract = "0.8.2"
 
 
 [build-dependencies]
