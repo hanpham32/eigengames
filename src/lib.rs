@@ -99,12 +99,27 @@ pub async fn start_gaia_node(
 async fn start_gaia_pre_processor(
     (event, _log): (TangleTaskManager::GaiaNodeStarted, Log),
 ) -> Result<Option<(Option<String>, Option<String>)>, ProcessorError> {
-    // Extract network and data_dir from the event
-    let network = event.network.clone();
-    let data_dir = event.dataDir.clone();
+    match which::which("gaianet") {
+        Ok(_) => {
+            blueprint_sdk::logging::info!(
+                "Found gaianet installation, proceeding with node startup"
+            );
 
-    // Return the extracted values
-    Ok(Some((Some(network), Some(data_dir))))
+            // Extract network and data_dir from the event
+            let network = event.network.clone();
+            let data_dir = event.dataDir.clone();
+
+            // Return the extracted values
+            Ok(Some((Some(network), Some(data_dir))))
+        }
+        Err(_) => {
+            blueprint_sdk::logging::error!(
+                "gaianet is not installed. Please install gaianet before starting a Gaia node"
+            );
+            // Return None to gracefully exit without running the job
+            Ok(None)
+        }
+    }
 }
 
 #[job(
