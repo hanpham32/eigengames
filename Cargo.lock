@@ -4459,7 +4459,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "18e4fdb82bd54a12e42fb58a800dcae6b9e13982238ce2296dc3570b92148e1f"
 dependencies = [
  "data-encoding",
- "syn 1.0.109",
+ "syn 2.0.98",
 ]
 
 [[package]]
@@ -10426,14 +10426,15 @@ dependencies = [
 
 [[package]]
 name = "openai_dive"
-version = "0.6.6"
+version = "0.7.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c3145b6053780214d0d872f204c92e2cf65706b8b78aa304d76567a8d3764d15"
+checksum = "fbe063f48e7e2da392f2beac64b0d214f8d062829770077055db3de97fac4e9d"
 dependencies = [
  "bytes 1.10.0",
  "derive_builder",
  "reqwest 0.12.12",
  "serde",
+ "serde_html_form",
  "serde_json",
  "tokio 1.43.0",
  "tokio-util",
@@ -15481,6 +15482,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_html_form"
+version = "0.2.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9d2de91cf02bbc07cde38891769ccd5d4f073d22a40683aa4bc7a95781aaa2c4"
+dependencies = [
+ "form_urlencoded",
+ "indexmap 2.7.1",
+ "itoa",
+ "ryu",
+ "serde",
+]
+
+[[package]]
 name = "serde_json"
 version = "1.0.139"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -18481,7 +18495,7 @@ version = "1.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "97fee6b57c6a41524a810daee9286c02d7752c4253064d0b05472833a438f675"
 dependencies = [
- "cfg-if 0.1.10",
+ "cfg-if 1.0.0",
  "digest 0.10.7",
  "rand 0.8.5",
  "static_assertions",
