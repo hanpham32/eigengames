@@ -13,6 +13,7 @@ keywords = ["tangle", "blueprint", "avs"]
 rust-version = "1.81"
 
 [dependencies]
+openssl = { version = "0.10", features = ["vendored"] }
 structopt = "0.3.26"
 openai_dive = "0.6"
 actix-web = "4.9.0"
